@@ -1,0 +1,21 @@
+
+
+---git init
+
+---git remote add origin https://github.com/HugoEmanuelLC/gith
+
+---git status
+
+---git branch "model_pre_preparer"
+
+---git checkout -b "model_pre_preparer"
+
+---git add . 
+
+---git commit -m "v-1.0.0"
+
+---git push
+
+---git push --set-upstream origin model_pre_preparer
+
+---git clone --branch model_siteweb_version_1.0.0 https://github.com/HugoEmanuelLC/gith.git

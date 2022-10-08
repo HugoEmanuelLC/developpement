@@ -1,0 +1,5 @@
+---npm install -g sass
+
+---sass --watch ./public/siteWeb/styles/main.scss:./public/siteWeb/styles/css/style.css --style compressed
+
+---npm run sass

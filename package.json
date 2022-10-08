@@ -1,0 +1,21 @@
+{
+  "name": "cms_squelette_v1",
+  "version": "1.0.0",
+  "description": "model cms_squelette_v1 creer en 2022",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sassDashboard": "sass --watch ./public/dashboard/styles/main.scss:./public/dashboard/styles/css/style.css --style compressed",
+    "sassSiteWeb": "sass --watch ./public/siteWeb/styles/main.scss:./public/siteWeb/styles/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoEmanuelLC/dev.git"
+  },
+  "author": "hugo lopes clavinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HugoEmanuelLC/dev/issues"
+  },
+  "homepage": "https://github.com/HugoEmanuelLC/dev#readme"
+}

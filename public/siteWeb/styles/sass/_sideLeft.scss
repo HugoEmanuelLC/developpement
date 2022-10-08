@@ -1,0 +1,17 @@
+.side_left{
+    background: linear-gradient(to bottom, #dcdcdc 0%, #919191 30%, #464646 100%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+        top: 0;
+        // left: -105%;
+    z-index: 2;
+}
+.desactive_side_left{
+    transition: 300ms;
+    left: -105%;
+}
+.active_side_left{
+    transition: 500ms;
+    left: 0;
+}

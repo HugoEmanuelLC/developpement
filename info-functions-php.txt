@@ -1,0 +1,28 @@
+// si je veux creer mon propre autoload:
+--- sql_autoload_register()
+ex: 
+sql_autoload_register(){
+    $path = __DIR__ .'/' .str_replace('\\','/',$class) .'.php';
+    (file_exists($path))? require $path : false;
+}
+
+
+
+// si besoin de remplacer des caracters ou autre:
+    1°quel caracter 
+    2°pour quel caracter 
+    3°dans quel variable
+--- str_replace('\\', '/', $variable)
+ex: 
+$path = __DIR__ .'/' .str_replace('\\','/',$class) .'.php';
+
+
+//Hash:
+---$psw = '1234';
+---$hash = password_hash($pasw, PASSWORD_BCRYPT, ['cost' => 10]);
+---password_verify($pasw, $hash);
+//en cas de changement du password_hash() ex: ['cost' => 10] -> ['cost' => 13]
+ça seras un genre refresh.
+---password_needs_reghash($pasw, $hash);
+
+

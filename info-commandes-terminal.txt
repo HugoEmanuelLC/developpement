@@ -1,0 +1,7 @@
+--- composer dump-autoload -o  
+--- composer dump-autoload  
+
+--- npm instal
+--- npm run sassSiteWeb
+
+--- composer instal
