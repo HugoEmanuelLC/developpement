@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Theme - CWloan</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <style>
+        
+/*GERAL*/
+        *
+            {box-sizing: border-box;margin: 0;padding: 0;font-family:serif , sans-serif;}
+        
+        html,body
+            {background-image: url(images/220398.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;}
+        
+        a
+            {text-decoration: none;}
+        
+        li
+            {list-style: none;}
+        
+        .cw-container
+            {min-height: 100vh;}
+        
+        
+        
+/*TETE DE PAGE*/
+        header
+            {}
+        header .img-haut
+            {position: relative;background-color: white;}
+        
+        header .img-haut img
+            {width: 100%;}
+        
+
+        
+/*TETE DE PAGE - RESEAU SOCIAL*/
+        header .res-social
+            {position: fixed; top: 30%;left: 5px;z-index: 10;display: flex;justify-content: center;align-items: center;flex-direction: column;}
+        
+        header .res-social li a
+            {display: flex;justify-content: center;align-items: center;color: black;background: rgb(255, 255, 255, 0.9);width: 35px;height: 35px;box-shadow: 5px 20px 20px rgba(0,0,0,.5);transition: .6s;margin: 5px;}
+        
+        header .res-social li a:hover
+            {background: rgb(100, 0, 0, 0.8);color: white;box-shadow: none;width: 30px;height: 30px;font-size: 90%;}
+        
+        
+        
+/*TETE DE PAGE - NAVIGATION*/
+        .navi
+            {position: -webkit-sticky;position: sticky;top:0;}
+        
+        .navi ul
+            {display: flex;justify-content: center;align-items: center;width: 100%;}
+        
+        .navi ul li
+            {width: 100%;}
+        
+        .navi ul li a
+            {height: 30px;width: 100%;display: flex;justify-content: center;align-items: center;box-shadow: 5px 20px 20px rgba(0,0,0,.5);transition: .6s;background-color: white;color: black;}
+        
+        .navi ul li a:hover
+            {box-shadow: none;background: rgb(100, 0, 0, 0.8);color: white;}
+        
+        
+        
+/*CORP DE PAGE - BLOC VIDE*/      
+        .bloc_vide
+            {height: 200px;}
+        
+        .corp-de-page
+            {background-color: white;min-height: 1000px;box-shadow: 5px 20px 20px rgba(0,0,0,.5);margin: auto 5%;}
+        
+        
+        
+        
+/*GRAND ECRAIN*/
+        @media screen and (min-width: 850px){
+            header .img-haut
+                {}
+            header .navi
+                {}
+        }
+        
+        
+        
+        
+        
+        
+        
+/*PETITE ECRAIN*/       
+        @media screen and (max-width: 849px){
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*  box-shadow: 5px 20px 20px rgba(0,0,0,.5);
+            background: rgb(230, 97, 8);
+            border-radius: 20px;
+            font-size: 3vh;*/
+    </style>
+    
+</head>
+
+
+
+
+
+
+
+<body>
+   
+   <div class="cw-container">
+      
+       <header>
+           <div class="img-haut">
+               <img src="images/Web-design.jpg" alt="image de presentation">
+           </div>
+           
+           
+<!--TETE DE PAGE - RESEAU SOCIAL-->
+               <ul class="res-social">
+                   <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                   <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                   <li><a href=""><i class="far fa-envelope"></i></a></li>
+               </ul>
+       </header>
+           
+           
+<!--TETE DE PAGE - NAVIGATION-->
+           <div class="navi">
+               <ul>
+                   <li><a href="">NAVI</a></li>
+                   <li><a href="">NAVI</a></li>
+                   <li><a href="">NAVI</a></li>
+               </ul>
+           </div>
+       
+       
+<!--CORP DE PAGE - BLOC VIDE-->      
+       <div class="bloc_vide">
+       </div>
+       
+       
+       <div class="corp-de-page">
+           <div class="bloc-article"></div>
+           <div class="bloc-article"></div>
+       </div>
+       
+       
+       
+   </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

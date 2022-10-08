@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Metro - template a tester</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/screenshot.png"/>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:bold">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style-Metro.css">
+    
+    
+    
+    
+    <style>
+        *{box-sizing: border-box;margin: 0;padding: 0;color: whitesmoke;font-family: sans-serif;}
+        
+        html,body
+            {min-height: 100%;background-color: #191970;}
+        
+        a
+            {text-decoration: none;}
+        
+        li
+            {list-style: none;}
+        
+        
+        
+        header
+            {display: flex;margin: 30px 0;}
+        header div
+            {height: 80px;width: 80px;}
+        
+        .logo
+            {width: 35%;display: flex;justify-content: center;align-items: center;}
+        .logo img
+            {height: 80px;}
+        
+        
+        @media screen and (min-width: 800px){
+            
+        .bloc-parent
+            {width: 90%;margin: auto;}
+            
+        .menu-1
+            {width: 65%;}
+        .menu-ouvert-ferme a i
+            {display: none;}
+        .menu-ouvert-ferme ul
+            {display: flex;justify-content: space-around;align-items: center;}
+        .menu-ouvert-ferme ul li
+            {display: flex;justify-content: space-around;align-items: center;width: 80px;height: 80px;}
+        .menu-ouvert-ferme ul li a
+            {display: flex;justify-content: space-around;align-items: center;height: 100%; width: 100%;transition: 500ms;}
+        .menu-ouvert-ferme ul li a:hover
+            {background: rgb(0,0,51,0.3);transition: 500ms;}
+            
+        .menu-2
+            {margin: 20px 0;min-height: 150px;display: grid;grid-template:auto/repeat(4,25%);}
+            
+        .bloc-parent-articles
+            {margin: 20px 0;min-height: 200px;display: grid;grid-template:auto/3fr 2fr;}
+        .article-1
+            {background-image: url(images/freelance-web-developer-at-work-696x464.jpg);background-position: center;background-size: cover;display: grid;grid-template:auto/50% 50%;margin-right: 5px;}
+            
+        footer
+            {min-height: 200px;display: grid;grid-row: repeat(2,50%);}
+            
+        footer .petit-text-footer
+            {display: grid;grid-template: auto/repeat(2,50%);align-items: center;}
+        }
+        
+        
+        
+        
+        @media screen and (max-width: 799px){
+            
+            .bloc-parent
+            {width: 95%;margin: auto;}
+            
+            .menu-1
+                {display: flex;justify-content: flex-end;align-items: center;width: 65%;}
+            
+            .menu-ouvert-ferme
+                {transition: 500ms;height: 80px;width: 160px;}
+            
+            .menu-ouvert-ferme a i
+                {height: 80px;display: flex;justify-content: space-around;align-items: center;transition: 500ms;font-size: 150%;}
+            
+            .menu-ouvert-ferme ul
+                {background: rgb(0,0,51,0.3);width: 160px;display: none;position: absolute;z-index: 10;transition: 800ms;}
+            
+            .menu-ouvert-ferme ul li a
+                {padding: 9px; display: flex;justify-content: space-around;align-items: center;}
+            
+            .menu-ouvert-ferme:hover
+                {background: rgb(0,0,51,0.3);transition: 500ms;}
+            
+            .menu-ouvert-ferme:hover ul
+                {display: block;transition: 500ms;}
+            
+            .menu-ouvert-ferme:hover a i
+                {transform: rotate(90deg);transition: 500ms;font-size: 250%;}
+            
+            .menu-ouvert-ferme ul li a:hover
+                {background-color: #fff;color: #191970;}
+            
+            .menu-2
+                {margin: 20px 0;min-height: 150px;display: grid;grid-template: 50% 50%/ 50% 50%;}
+            .menu-2 div
+                {min-height: 150px;}
+            
+            
+            .bloc-parent-articles
+                {min-height: 500px;display: grid;grid-template:50% 50%/auto;}
+            
+            .article-1
+                {background-image: url(images/freelance-web-developer-at-work-696x464.jpg);background-position: center;background-size: cover;display: grid;grid-template:auto/50% 50%;margin-bottom: 20px;}
+            
+            footer
+                {margin-top: 20px;min-height: 300px;display: grid;grid-template:auto/100%;}
+            
+            footer .petit-text-footer
+            {display: grid;grid-template: repeat(2,50%)/auto;align-items: center;}
+            
+        }
+        
+        
+        
+        
+        
+        
+        .presentation
+            {position: relative;border: solid 3px #7B68EE; border-radius: 2px;z-index: 1;}
+        .presentation .titre
+            {position: absolute;left: 15%;top: 45%;}
+        .presentation .titre p
+            {font-size: 10px;}
+        .presentation .butao
+            {background-color: darkorange;padding: 4px;margin-top: 10px;display:flex;align-items: center;justify-content: space-around;font-size: 12px;}
+        
+        .presentation .gallerie 
+            {position: relative;z-index: -5;}
+        .presentation .mySlides 
+            {display:none;width: 100%;}
+        .presentation .button-gauche
+            {position: absolute;top:calc(50% - 20px);left: 0;width: 40px;height: 40px;}
+        .presentation .button-droite
+            {position: absolute;top:calc(50% - 20px);right: 0;width: 40px;height: 40px;}
+        .presentation .button
+            {background-color: #191970;border-radius:50%;display: flex;justify-content: center;align-items:center;}
+        .presentation .button:hover
+            {background-color: #fff;}
+        .presentation .button:hover i
+            {color: #191970;}
+        
+        
+        
+        .menu-2 div
+            {position: relative;margin: 5px;display:flex;align-items: center;justify-content: space-around;}
+        .menu-2 div i
+            {font-size: 60px;}
+        .menu-2 div p
+            {font-size: 14px; position: absolute;bottom:2px;left:2px;}
+        
+        
+        
+        
+        .article-1 div
+            {display:flex;align-items: center;justify-content: space-around;}
+        .article-1 ul
+            {font-size: 12px;}
+        
+        
+        .article-2
+            {background-image: url(images/lego-star-wars-clone.jpg);background-position: center;background-size: cover; display: grid;grid-template:60% 40%/auto;}
+        .article-2 div
+            {margin: 4px 0;}
+        .article-2 .article-bloc-shadow
+            {background: rgb(0, 0, 0,0.5);width: 100%;height: 100%;display: flex;}
+        .article-2 .article-bloc-shadow p
+            {font-size: 12px;margin: 5px 5px;}
+        
+        footer
+            {border-top:solid 3px #7B68EE;border-left:solid 3px #7B68EE;border-right:solid 3px #7B68EE;font-size: 12px;}
+            
+        footer .bloc-Copyright
+            {width: 100%;display: flex;justify-content:center;align-items: flex-end;margin-bottom: 10px;}
+        
+        footer .petit-text-footer .bloc-right
+            {display: flex;justify-content: center;align-items: center;}
+        
+        footer .petit-text-footer .bloc-right ul li
+            {margin-bottom: 5px;}
+        
+        footer .petit-text-footer .bloc-left
+            {display: flex;justify-content: center;align-items: center;}
+        
+        
+        /*background: rgb(0,0,51,0.3);*/
+        
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+    <div class="bloc-parent">
+       
+       
+       
+        <header>
+            <div class="logo">
+                <img src="images/logo-cweb.png" alt="logo">
+            </div>
+            
+            
+            <div class="menu-1">
+                <ul>
+                    <li class="menu-ouvert-ferme">
+                        <a href="#"><i class="fas fa-bars"></i></a>
+                        <ul>
+                            <li><a href="#">lien</a></li>
+                            <li><a href="#">lien</a></li>
+                            <li><a href="#">lien</a></li>
+                            <li><a href="#">lien</a></li>
+                            <li><a href="#">lien</a></li>
+                            <li><a href="#">lien</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </header>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="presentation">
+            <div class="titre">
+                <h1>C-Web.be</h1>
+                <P>Pour une meilleur visibilité sur le web</P>
+                <div class="butao">
+                    FAITE UN TOUR
+                </div>
+            </div>
+            
+            
+
+
+            <div class="gallerie">
+              <img class="mySlides" src="images/117009.jpg">
+              <img class="mySlides" src="images/857335.jpg">
+              <img class="mySlides" src="images/946520.jpg">
+              <img class="mySlides" src="images/wallpaper-hd-pubg-3840x2160.jpg">
+
+              <div class="button button-gauche" onclick="plusDivs(-1)"><i class="fas fa-arrow-left"></i></div>
+              <div class="button button-droite" onclick="plusDivs(1)"><i class="fas fa-arrow-right"></i></div>
+            </div>
+       
+       
+           <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                  showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  if (n > x.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  x[slideIndex-1].style.display = "block";  
+                }
+            </script>
+       
+           </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="menu-2">
+            <div style="background-color: darkorange;">
+                <i class="fas fa-atlas"></i>
+                <p style="">templates</p>
+            </div>
+            
+            <div style="background-color: deepskyblue;">
+                <i class="far fa-window-restore"></i>
+                <p style="">site vitrine</p>
+            </div>
+            
+            <div style="background-color: mediumvioletred;">
+                <i class="fas fa-blog"></i>
+                <p style="">blog</p>
+            </div>
+            
+            <div style="background-color: lawngreen;">
+                <i class="fas fa-store-alt"></i>
+                <p style="">e-commerce</p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="bloc-parent-articles">
+            <div class="article-1">
+                <div></div>
+                <div style="background-color:blueviolet;">
+                    <ul>
+                        <li>- Type de site pour vous besoins </li><br>
+                        <li>- Choix de la template</li><br>
+                        <li>- Programmation de celle-ci</li><br>
+                        <li>- Teste, virification et modification</li><br>
+                        <li>- Site en ligne!</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="article-2">
+                <div class="article-hover"></div>
+                <div>
+                    <div class="article-bloc-shadow">
+                        <p>Creation de sites internet avec passion!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <footer>
+             <div class="petit-text-footer">
+                 <div class="bloc-left">hugo</div>
+                 <div class="bloc-right">
+                     <div></div>
+                     <div>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twiter</li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             
+             <div class="bloc-Copyright"><a href="Cweb.com" target="_blank">&nbsp C-Web.be &nbsp</a>-&nbsp Copyright © 2020&nbsp -&nbsp Tous droits réservés</div>
+        </footer>
+        
+    </div>
+    
+    
+</body>
+</html>

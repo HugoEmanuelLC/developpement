@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>minha biblioteca - description</title>
+    
+    <style>
+        /*GERAL*/
+        html,body
+            {background-color: black;margin: 0;padding: 0;}
+        a
+            {text-decoration: none;}
+        li
+            {list-style: none;}
+        
+        /*HEADER GERAL*/
+        header ul
+            {display: flex;justify-content: space-around;flex-wrap:wrap;align-content:space-between;}
+        header ul li
+            {color: red;}
+        header ul li a
+            {color: green;}
+        
+        
+        
+        /*PAGE POSITIONS BLOC PARENT*/
+        .bloc-parent
+            {width: 80%;margin: auto;min-height: 600px;background-color: lightgray;}
+        .bloc-parent ul li
+            {list-style: disc;}
+        
+        /*RELATIVE ET ABSOLUTE*/
+        .relative
+            {position: relative;left: 70px; width: 400px;height: 200px;border: 3px solid #73AD21;}
+        .absolute
+            {position: absolute;top: 80px;right: 0;width: 200px;height: 100px;border: 3px solid #73AD21;}
+        
+        
+        /*STICKY*/
+        .box-sticky
+            {width: 200px;height: 200px;overflow-y: auto;border: solid 1px red;background-image: url(images/Blog-intro.jpg);}
+        .sticky
+            {position: -webkit-sticky;
+             position: sticky;top: 0;padding: 5px;background-color: #cae8ca;border: 2px solid #4CAF50;}
+    </style>
+</head>
+<body>
+   <header>
+       <div>
+           <ul>
+               <li><a href="index.html">home</a></li>
+               <li><a href="flex.html">flex</a></li>
+               <li><a href="grille.html">grilles</a></li>
+               <li style="text-decoration: underline;">positions</li>
+               <li><a href="gallerie.html">gallerie</a></li>
+           </ul>
+       </div>
+   </header>
+   
+   
+   
+    <div class="bloc-parent">
+        <div>
+            <h1>POSITION</h1>
+            <ul>
+                <li>static (par défaut)</li>
+                <li>relative</li>
+                <li>fixed</li>
+                <li>absolute</li>
+                <li>sticky</li>
+            </ul>
+        </div>
+        
+        <div class="relative">
+          relative
+           <div class="absolute">
+               absolute
+           </div>
+            
+        </div>
+        
+        <br><br><br><br>
+        sticky
+        
+        <div class="box-sticky">
+           <h3>I'm not sticky!</h3>
+           <h3>I'm not sticky!</h3>
+           <h3 class="sticky">I am sticky!</h3>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam cumque velit iure debitis eaque dicta eligendi odit aut minus voluptatibus sunt sint, architecto inventore non corporis aliquid saepe porro dolores.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam cumque velit iure debitis eaque dicta eligendi odit aut minus voluptatibus sunt sint, architecto inventore non corporis aliquid saepe porro dolores.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam cumque velit iure debitis eaque dicta eligendi odit aut minus voluptatibus sunt sint, architecto inventore non corporis aliquid saepe porro dolores.<br></p></div>
+        </div>
+    </div>
+   
+   
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

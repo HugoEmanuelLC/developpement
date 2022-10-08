@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex - com suas possibilidades</title>
+    
+    
+    
+    <style>
+        /*GERAL*/
+        html,body
+            {background-color: black;margin: 0;padding: 0;}
+        a
+            {text-decoration: none;}
+        li
+            {list-style: none;}
+        
+        /*HEADER GERAL*/
+        header ul
+            {display: flex;justify-content: space-around;flex-wrap:wrap;align-content:space-between;}
+        header ul li
+            {color: red;}
+        header ul li a
+            {color: green;}
+        
+        
+        
+        /*PAGE FLEX*/
+        #grande-bloco
+            {width: 90%;margin: auto;background-color:rgb(255, 255, 255, 0.5);}
+        .text
+            {text-align: center;}
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE*/
+        .bloco-de-base
+            {min-height: 120px;margin-bottom: 30px;border: solid 2px blue;display: flex;justify-content: space-around;}
+        .bloco-1
+            {height: 80px;width: 80px;border-radius: 50%;background-color: aqua;}
+        .bloco-2
+            {height: 90px;width: 90px;background-color: red;}
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-2*/
+        .bloco-de-base-2
+            {min-height: 120px;margin-bottom: 30px;border: solid 2px blue;display: flex;align-items: center;}
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-3*/
+        .bloco-de-base-3
+            {min-height: 120px;margin-bottom: 30px;border: solid 2px blue;display: flex;flex-direction:row-reverse;}
+        .bloco-3
+            {height: 80px;width: 80px;border-radius: 50%;background-color: aqua;display:flex;align-items: center;justify-content: space-around;}
+        .bloco-4
+            {height: 80px;width: 80px;border-radius: 50%;background-color:fuchsia;display:flex;align-items: center;justify-content: space-around;}
+        .bloco-5
+            {height: 80px;width: 80px;border-radius: 50%;background-color:floralwhite;display:flex;align-items: center;justify-content: space-around;}
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-4*/
+        .bloco-de-base-4
+            {min-height: 120px;margin-bottom: 30px;border: solid 2px blue;display: flex;flex-direction:row;justify-content:center;align-items:flex-end;}
+        .bloco-6
+            {height: 80px;width: 80px;border-radius: 50%;background-color: aqua;display:flex;align-items: center;justify-content: space-around;}
+        .bloco-7
+            {height: 80px;width: 80px;border-radius: 50%;background-color:fuchsia;display:flex;align-items: center;justify-content: space-around;}
+        .bloco-8
+            {height: 80px;width: 80px;border-radius: 50%;background-color:floralwhite;display:flex;align-items: center;justify-content: space-around;}
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-5*/
+        .bloco-de-base-5
+            {min-height: 120px;margin-bottom: 30px;border: solid 2px blue;display: flex;justify-content:space-around;align-items:center;}
+        .bloco-vert
+            {height: 80px;width: 80px;border-radius: 50%;background-color: green;display:flex;align-items: center;justify-content: space-around;}
+        .bloco-rouge
+            {height: 80px;width: 80px;border-radius: 50%;background-color:red;order:-1;display:flex;align-items: center;justify-content: space-around;}
+        .bloco-jaune
+            {height: 80px;width: 80px;border-radius: 50%;background-color:yellow;order:-1;display:flex;align-items: center;justify-content: space-around;}
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-6*/
+        .bloco-de-base-6
+            {min-height: 120px;margin-bottom: 30px;border: solid 2px blue;display: flex;flex-wrap:wrap-reverse;}
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-7*/
+        .bloco-de-base-7
+            {height: 300px;margin-bottom: 30px;border: solid 2px blue;display: flex;flex-direction:column;flex-wrap:wrap;}
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-8*/
+        .bloco-de-base-8
+            {height: 300px;margin-bottom: 30px;border: solid 2px blue;display: flex;flex-flow: column wrap;}
+        
+        
+        
+        
+        /*PAGE FLEX BLOCO-DE-BASE-9*/
+        .bloco-de-base-9
+            {height: 300px;margin-bottom: 30px;border: solid 2px blue;display: flex;flex-wrap: wrap;align-content:space-between;}
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  <header>
+       <div>
+           <ul>
+               <li><a href="index.html">home</a></li>
+               <li style="text-decoration: underline;">flex</li>
+               <li><a href="grille.html">grilles</a></li>
+               <li><a href="positions.html">positions</a></li>
+               <li><a href="gallerie.html">gallerie</a></li>
+           </ul>
+       </div>
+   </header>
+   
+   
+   
+   
+   
+   
+   
+   
+   <div id="grande-bloco">
+     
+     PAGE FLEX BLOCO-DE-BASE
+      <p class="text">
+         display: flex; justify-content:<br>
+          =>space-around ;
+          =>space-between ;
+          =>center ;
+          =>flex-end ;
+          =>flex-start ;
+      </p>
+      
+       <div class="bloco-de-base">
+           <div class="bloco-1"></div>
+           <div class="bloco-2"></div>
+       </div>
+        
+        
+       <br> 
+       <br> 
+       <br> 
+ 
+        
+  PAGE FLEX BLOCO-DE-BASE-2      
+    <p class="text">
+         display: flex; align-items: ou align-self:<br>
+          =>center ;
+          =>stretch ;
+          =>baseline ;
+          =>flex-end ;
+          =>flex-start ;
+      </p>
+        <div class="bloco-de-base-2">
+               <div class="bloco-1"></div>
+               <div class="bloco-2"></div>
+           </div>
+           
+           
+           
+          <br> 
+          <br> 
+          <br> 
+           
+           
+           
+  PAGE FLEX BLOCO-DE-BASE-3        
+           <p class="text">
+         display: flex; flex-direction:<br>
+          =>row-reverse ;
+          =>row ;
+          =>column ;
+          =>column-reverse ;
+      </p>
+        <div class="bloco-de-base-3">
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+           </div>
+           
+           
+           <br>
+           <br>
+           <br>
+           
+           
+           
+           PAGE FLEX BLOCO-DE-BASE-4        
+           <p class="text">
+         display: flex; + flex-direction:; + align-items:; + justify-content:;
+      </p>
+        <div class="bloco-de-base-4">
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+           </div>
+           
+           
+           
+           
+           <br>
+           <br>
+           <br>
+           
+           
+           
+           
+           PAGE FLEX BLOCO-DE-BASE-5       
+           <p class="text">
+           bloco dos circulos {display: flex;}<br>
+             circulo amarelo {order:-1;}
+      </p>
+        <div class="bloco-de-base-5">
+               <div class="bloco-vert"><p>1-vert</p></div>
+               <div class="bloco-rouge"><p>2-rouge</p></div>
+               <div class="bloco-jaune"><p>3-jaune</p></div>
+           </div>
+           
+           
+           
+           
+           
+           
+           
+           <br>
+           <br>
+           <br>
+           
+           
+           
+           
+           
+           PAGE FLEX BLOCO-DE-BASE-6        
+           <p class="text">
+         display: flex; flex-wrap:<br>
+          =>wrap-reverse ;
+          =>wrap ;
+          =>nowrap ;
+      </p>
+        <div class="bloco-de-base-6">
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+           </div>
+           
+           
+           
+           
+           
+           
+           <br>
+           <br>
+           <br>
+           
+           
+           
+           
+           
+           PAGE FLEX BLOCO-DE-BASE-7        
+           <p class="text">
+         display: flex; + flex-wrap:; + flex-direction:;
+      </p>
+        <div class="bloco-de-base-7">
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+           </div>
+           
+           
+           
+           
+           
+           
+           <br>
+           <br>
+           <br>
+           
+           
+           
+           
+           
+           PAGE FLEX BLOCO-DE-BASE-8        
+           <p class="text">
+         display: flex; + flex-flow: column wrap; 
+         <br> 
+         qui remplace: 
+         <br>
+         (flex-direction:column; + flex-wrap:wrap;(PAGE FLEX BLOCO-DE-BASE-7))
+      </p>
+        <div class="bloco-de-base-8">
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+           </div>
+           
+           
+           
+           
+           
+           
+           
+           <br>
+           <br>
+           <br>
+           
+           
+           
+           
+           
+           PAGE FLEX BLOCO-DE-BASE-9        
+           <p class="text">
+         display: flex; + flex-wrap:wrap; + align-content:space-between;
+      </p>
+        <div class="bloco-de-base-9">
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+               <div class="bloco-3"><p>3</p></div>
+               <div class="bloco-4"><p>4</p></div>
+               <div class="bloco-5"><p>5</p></div>
+               <div class="bloco-6"><p>6</p></div>
+               <div class="bloco-7"><p>7</p></div>
+               <div class="bloco-8"><p>8</p></div>
+           </div>
+       </div>
+   
+   
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

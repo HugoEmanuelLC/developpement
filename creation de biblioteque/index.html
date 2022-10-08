@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ma biblioteque</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/RPkFVa.png"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blocParentDePage">
+
+        <header>
+            <div class="navig">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#php">Php</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Css</a>
+                        <ul>
+                            <li><a href="#displayFlex">display Flex</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Jave Script</a>
+                        <ul>
+                            <li><a href="#node">node</a></li>
+                            <li>
+                                <a href="#express">Express</a>
+                                <ul class="sous_lien_3eme_niveau">
+                                    <li><a href="#lesRoutes">Les Routes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#body_parser">Body Parser</a></li>
+                            <li><a href="#template_ejs">Template ejs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section>
+            <div id="fixe">
+                <h1>Biblioteque au besoin :<br>Web Apps</h1>
+            </div>
+
+            <div id="php">
+                <h1>PHP</h1>
+                <code>
+                    &lt;?php 
+                        
+                    ?&lt;
+                </code>
+            </div>
+
+            <div id="displayFlex">
+                <h1>Css : display Flex</h1>
+            </div>
+            
+            <div id="node">
+                <h1>NODE : bases</h1>
+            </div>
+
+            <div id="express">
+                <h1>Express :</h1>
+                <!-- &lt; &gt; -->
+
+                <!-- <h3></h3>
+                <code>
+                    
+                </code> -->
+
+                <h3>npm init</h3>
+                <p>On demarre un projet server.js en utilisant la commande npm init pour creer le package.json 
+                   apres avoir creer le fichier de base du server (nom.js), qui sera le resumé et les infos de notre serveur.</p>
+                
+                <h3>Importation d'une librairie</h3>
+                <code>
+                var express = require('express')
+                </code>
+
+                <h3>créer un server avec node...</h3>
+                <code>
+                var http = require('http')<br>
+                var server = http.createServer(function(req,res){ //… })<br>
+                server.listen(8888)
+                </code>
+
+                <h3>...et avec express</h3>
+                <code>
+                var express= require('express')<br>
+                var app = express()<br>
+                var port = 3000<br>
+
+                app.listen(port)
+                </code>
+
+                <h3>Importation d'une page ou fragment de page, EX:</h3>
+                <code>
+                &lt;% include fragment/head.ejs %&gt;<br>
+                &lt;div class="main-content"&gt;<br>
+                &lt;%- include(page); -%&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;% include fragment/foot.ejs %&gt;
+                </code>
+
+                <h3>Nodemon...</h3>
+                <p>Pour nous faciliter la vie, à nous et au server, 
+                    on utilise <mark>nodemon nomServeur.js</mark> à la place de <mark>node nomServeur.js</mark>,
+                ça nous permettra de relance le serveur automatiquement en cas de changement dans les fichiers du server.</p>
+
+                <h3>...Installation:</h3>
+                <p><mark>
+                    npm install -g nodemon      <code>//En mode global, pour tous les servers</code>
+                </mark></p>
+                <p><mark>
+                    npm install nodemon      <code>//En mode local pour le server de ce projet</code>
+                </mark></p>
+
+                <p style="background-color: red;color: white;">Si une erreur de type interdiction de lancer nodemon à cause de policy de lancement de script
+                    extérieur, il suffit de taper cette ligne pour régler le soucis. (console powershell en administrateur)</p>
+                <p>Regarder la restrinction de powershell</p>
+                <mark>
+                    Get-ExecutionPolicy
+                </mark>
+
+                <p>Si 'Restricted'</p>
+
+                <mark>
+                    Get-ExecutionPolicy Unrestricted
+                </mark>
+
+                <p>Verifier à nouveau</p>
+                <mark>
+                    Get-ExecutionPolicy
+                </mark>
+
+                <p>Si 'Unrestricted'</p>
+
+                <p>C'est bon !</p>
+                
+                <!-- &lt; &gt; -->
+
+                <!-- <h3></h3>
+                <code>
+                    
+                </code> -->
+            </div>
+
+            <div id="lesRoutes">
+                <h1>Les Routes :</h1>
+
+                <p><strong>App :</strong> L’application express en elle même</p>
+                <p><strong>Method :</strong> l’un des verbes http : GET, POST, PATCH, PUT, DELETE,…</p>
+                <p><strong>Path :</strong> Chemin de l’url qui doit être capturée</p>
+                <p><strong>handler :</strong> fonction anonyme ou fléchée :) qui doit être exécutée</p>
+
+                <h3>Le routing de base suit un pattern très simple:</h3>
+                <mark>app.METHOD(PATH, HANDLER)</mark>
+                <p>Exemple:</p>
+                <code>
+                    app.get(‘/’, function(req, res) {<br>
+                        console.log(‘hello world’)<br>
+                        })
+                </code>
+                <p>Le <strong>req :</strong> contient toute les informations concernant la requête capturée.</p>
+                <p>Le <strong>res :</strong> est l’élément que le serveur express va renvoyer à son interlocuteur. (le navigateur par ex)</p>
+
+                <h3>Res</h3>
+                <p><strong>res.download(“pathFileName”) </strong>vous invite à telecharger un fichier</p>
+                <p><strong>res.end() </strong>mets fins au processus de reponse</p>
+                <p><strong>res.json() </strong>envoie une reponse Json</p>
+                <p><strong>res.redirect(URI) </strong>redirige une demande</p>
+                <p><strong>res.render(“viewName”) </strong>genere un modele de vue</p>
+                <p><strong>res.send(“string”) </strong>envoie une reponse de divers type</p>
+            </div>
+
+            <div id="body_parser">
+                <h1>body-parser :</h1>
+            </div>
+
+            <div id="template_ejs">
+                <h1>Template ejs :</h1>
+
+                <p>Pour "ejs" le tag principal est "&lt;% ... %&gt;"</p>
+                <p>Et on le trouve sous plusieurs déclinaisons:</p>
+                <p>&lt;% 🡺 Contrôle du flow d’instruction</p>
+                <p>&lt;%= 🡺 Affichage d’une valeur de variable, avec échappement des tags HTML</p>
+                <p>&lt;%- 🡺 Affichage d’une valeur sans échappement, injections de données</p>
+                <p>&lt;%# 🡺 Commentaires</p>
+                <p>&lt;%% 🡺 Permet de sortir ‘&gt;%’</p>
+
+                <h3></h3>
+                <p>L’intérêt des templates est de pouvoir retrouver l’utilisation des inclusions de fichiers au
+                    moyen de la méthode <mark>‘include()’</mark>.</p>
+                <p>par exemple : l’<strong>index.ejs</strong>, sera le point d’entrée commun à toutes les
+                    vues de notre site :</p>
+                <code>
+                    &lt;%- include(page); -&gt;>
+                </code>
+            </div>
+
+            <!-- <div id="">
+                <h1></h1>
+            </div> -->
+        </section>
+
+        <footer></footer>
+    </div>
+</body>
+</html>

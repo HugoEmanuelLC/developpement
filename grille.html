@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>minha biblioteca - description</title>
+    
+    <style>
+        /*GERAL*/
+        html,body
+            {background-color: black;margin: 0;padding: 0;}
+        a
+            {text-decoration: none;}
+        li
+            {list-style: none;}
+        
+        /*HEADER GERAL*/
+        header ul
+            {display: flex;justify-content: space-around;flex-wrap:wrap;align-content:space-between;}
+        header ul li
+            {color: red;}
+        header ul li a
+            {color: green;}
+        
+        
+        
+        
+        /*PAGE DE GRILLLE*/
+        span
+            {color: red;}
+        
+        
+        .garden 
+            {box-sizing: border-box; background-color: aliceblue; height: 600px; width: 600px; margin: auto;display: grid;grid-template-columns: 20% 20% 20% 20% 20%;/*ou :repeat(5, 20%);*/
+              grid-template-rows: repeat(5, 20%);
+            }
+        .garden div
+            {border: solid 1px;}
+        
+        
+        
+
+        .green 
+            { background-color: green;
+              grid-column:1/5;grid-row: 1/3;}
+        .red 
+            { background-color: red;
+                grid-row:span 2/3;}
+        .blue 
+            { background-color: blue;
+              grid-row-start:3;grid-column-end: -3;}
+        .yelow 
+            { background-color: yellow;
+              grid-row-start:4;
+              grid-column-start:1;
+                grid-row-end: 5;
+                grid-column-end: 4;}
+        .darkgray 
+            { background-color: darkgray;
+               grid-area:6/1/5/4;}
+        
+        
+        
+        
+        
+        
+        
+     /*PAGE DE GRILLLE 2*/    
+        .garden2
+            {box-sizing: border-box; background-color: aliceblue; height: 600px; width: 600px; margin: auto;display: grid;grid-template-columns: 10% repeat(3,30%);/*une outre façon de partage les blocs (ça me fait pensé à bootstrap et son col-)*/
+                
+              grid-template-rows:10% repeat(3,30%);/*une outre façon de partage les blocs (ça me fait pensé à bootstrap et son col-)*/
+            }
+        .garden2 div
+            {border: solid 1px;}
+        
+        
+        
+        /*PAGE DE GRILLLE 3*/    
+        .garden3
+            {box-sizing: border-box; background-color: aliceblue; height: 600px; width: 600px; margin: auto;
+              display: grid;grid-template: 50px 1fr / 1fr 80%;/*une outre façon de partage les blocs (ça me fait pensé à bootstrap et son col-)*/
+            }
+        .garden3 div
+            {border: solid 1px;}
+        
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+   <header>
+       <div>
+           <ul>
+               <li><a href="index.html">home</a></li>
+               <li><a href="flex.html">flex</a></li>
+               <li style="text-decoration: underline;">grilles</li>
+               <li><a href="positions.html">positions</a></li>
+               <li><a href="gallerie.html">gallerie</a></li>
+           </ul>
+       </div>
+   </header>
+   
+  <p style="background-color: white;text-align: center;">
+      Si taper à la fois <span>grid-column</span> et <span>grid-row</span> est trop long pour vous, il y a encore un raccourci pour cela. <span>grid-area</span> accepte quatre valeurs séparées par des slashes : <span>grid-row-start</span>, <span>grid-column-start</span>, <span>grid-row-end</span>, suivies par <span>grid-column-end</span>.
+  </p>
+  
+  <p style="background-color: white;text-align: center;">
+      display: grid;grid-template-columns: 20% 20% 20% 20% 20%;/*ou :repeat(5, 20%);*/
+      <br>
+      .green 
+            { background-color: green;
+              grid-column:1/5;grid-row: 1/3;}
+        <br>
+        .red 
+            { background-color: red;
+                grid-row:span 2/3;}
+  </p>
+ 
+    <div class="garden">
+        <div class="green"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="red"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        <div class="blue"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="yelow"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        
+        <div class="darkgray"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <p style="background-color: white;text-align: center;">
+      display: grid;grid-template-columns: 10% repeat(3,30%);
+  </p>
+ 
+    <div class="garden2">
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <p style="background-color: white;text-align: center;">
+      display: grid;grid-template: 50px 1fr / 1fr 80%;
+  </p>
+ 
+    <div class="garden3">
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+        
+        <div class=""></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+
+</body>
+</html>
