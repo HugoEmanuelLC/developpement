@@ -1,0 +1,93 @@
+.navbar{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar a{
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar a:hover{
+    background-color: rgb(100, 25, 25);
+    transition: 400ms ease-in-out;
+}
+
+.sousNavBar{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.sousNavBar a{
+    color: white;
+    width: 100%;
+    padding: 10px 20px 10px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.sousNavBar a:hover{
+    background-color: orangered;
+}
+
+.sousNavBar button, .phoneCommande button{
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+        top: 10px;
+        right: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+}
+
+
+.side_left{
+    background-color: rgb(100, 25, 25,0.95);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+        top: 0;
+        left: -105%;
+    z-index: 2;
+}
+
+.desactive_side_left{
+    transition: 300ms;
+    left: -105%;
+}
+.active_side_leftMenu, 
+.active_side_leftPhone{
+    transition: 500ms;
+    left: 0;
+}
+
+
+.ecrain_petit, .ecrain_petit i{
+    display: none;
+}
+.ecrain_large{
+    display: block;
+}
+
+@media screen and (max-width: 688px) {
+    .navbar a{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .ecrain_petit, .ecrain_petit i{
+        display: block;
+    }
+    .ecrain_large{
+        display: none;
+    }
+}

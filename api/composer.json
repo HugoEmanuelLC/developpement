@@ -1,0 +1,20 @@
+{
+    "name": "hlc/model_09_2022",
+    "description": "cms squelette",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hlc\\Model042022\\": "src/",
+            "App\\": "app/",
+            "Router\\": "router/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "hugo lopes clavinas",
+            "email": "helc85.info@gmail.com"
+        }
+    ],
+    "require": {}
+}

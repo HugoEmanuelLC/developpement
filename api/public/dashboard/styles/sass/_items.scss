@@ -1,0 +1,83 @@
+.itemNew{
+    background-color: rgb(22, 45, 42,0.5);
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+h2{
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+.itemNew form{
+    padding: 10px;
+    // border: solid 2px rgb(172, 172, 172);
+    border-radius: 20px;
+    // box-shadow: 4px 4px 4px black;
+}
+.itemNew form input{
+    border-radius: 10px;
+    padding: 2px;
+    width: 100%;
+    color: black;
+}
+.itemNew form .button,
+.items form .button{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin: 5px 0 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.itemNew form .button:hover, 
+.items form .button:hover{
+    background-color: rgb(0, 186, 0);
+}
+
+
+.box_items{
+    // background-color: red;
+    // margin: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
+}
+.items{
+    // border: solid blue 4px;
+    background-color: rgb(255, 255, 255,0.5);
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.items form{
+    display: flex;
+    flex-direction: column;
+}
+.items div{
+    display: flex;
+    margin: 2px;
+}
+.items form input{
+    border-radius: 10px;
+    padding: 2px;
+    // width: 100%;
+    color: black;
+}
+.items form button{
+    background-color: rgb(137, 0, 0);
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.items form button:hover{
+    background-color: red;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 688px) {
+    .items div{
+        flex-direction: column;
+    }
+}

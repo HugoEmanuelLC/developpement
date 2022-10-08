@@ -1,0 +1,53 @@
+.login{
+    // border: solid 5px blue;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login .a_loguin_retour{
+    box-shadow: 0 0 0 black;
+}
+
+.login .titre_loguin{
+    padding-bottom: 40px;
+}
+.login .titre_loguin h1{
+    padding-top: 20px;
+}
+
+.login .titre_loguin, 
+.login form{
+    width: 50%;
+}
+
+.login form{
+    padding: 10px;
+    border: solid 2px rgb(172, 172, 172);
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px black;
+}
+.login form div input{
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    color: black;
+}
+
+.login form .button_loguin_submit button{
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login form .button_loguin_submit button:hover{
+    background-color: rgb(0, 186, 0);
+}
+
+@media screen and (max-width: 688px) {
+    .login .titre_loguin, 
+    .login form{
+        width: 90%;
+    }
+}

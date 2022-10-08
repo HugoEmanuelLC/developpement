@@ -1,0 +1,42 @@
+header{
+    background-color: chocolate;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border-bottom: 5px solid black;
+}
+
+header .logo h1{
+    color: gray;
+    font-size: 3.5rem;
+    margin-left: 10%;
+    padding: 8px 0;
+    line-height: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 350ms;
+    font-family:'Fjalla One', Arial, sans-serif;
+}
+
+header .logo h1 span{
+    font-size: 0.9rem;
+    font-family:'Fjalla One', Arial, sans-serif;
+}
+
+.logo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 688px) {
+    header{
+        flex-direction: column;
+    }
+    header .logo h1{
+        margin: 0 auto;
+    }
+}

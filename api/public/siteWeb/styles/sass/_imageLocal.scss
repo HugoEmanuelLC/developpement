@@ -1,0 +1,30 @@
+/* IMAGES DU LOCAL */
+.imagesDuLocal{
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.image1, .image2, .image3{
+    height: 100vh;
+    border-bottom: 8px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 688px){
+    .image1{
+        background-size: 150%;
+        background-position: center;
+    }
+    .image2{
+        background-size: 150%;
+        background-position: right;
+    }
+    .image3{
+        background-size: 150%;
+        background-position: right;
+    }
+}
