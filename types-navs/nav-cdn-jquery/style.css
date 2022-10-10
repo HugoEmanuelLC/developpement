@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+}
+header{
+    background-color: blueviolet;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+}
+header a{
+    color: white;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    width: 100%;
+    padding: 30px;
+}
+#top_page{
+    position: relative;
+}
+#top_page div{
+    min-height: 70vh;
+}
+#Zone_1{background-color: red;}
+#Zone_2{background-color: green;}
+#Zone_3{background-color: blue;}
+footer{
+    height: 50vh;
+}
