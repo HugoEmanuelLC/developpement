@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    transition: 900ms;
+}
+
+header{
+    background-color: brown;
+    width: 100%;
+    position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+header a{
+    width: 100%;
+    padding: 20px;
+}
+header a:nth-child(1){
+    background-color: aliceblue;}
+header a:nth-child(2){
+    background-color: blue;}
+header a:nth-child(3){
+    background-color: chocolate;}
+
+body{
+    background-color: brown;
+    /* border: solid 2px black; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pages{
+    background-color: green;
+    position: relative;
+    min-height: 100vh;
+}
+.pages div{
+    display: none;
+    font-size: 0;
+}
+.pages div:target{
+    display: block;
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+}
+.pages #zero{
+    background-color: aliceblue;
+    color: black;
+}
+.pages #un{
+    background-color: blue;
+    color: black;
+}
+.pages #deux{
+    background-color: chocolate;
+    color: black;
+}
+
+footer{
+    height: 200px;
+}
+
+::-webkit-scrollbar{
+    background-color: black;
+    pointer-events: visible;
+    width: 3px;
+    height: 1px;
+}
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(63, 63, 63); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}

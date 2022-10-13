@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue router</title>
+</head>
+<body>
+    <template>
+        <a href="#/">Home</a> |
+        <a href="#/about">About</a> |
+        <a href="#/non-existent-path">Broken Link</a>
+        <component :is="currentView" />
+      </template>
+
+    <script src="public/router.vue"></script>
+</body>
+</html>
