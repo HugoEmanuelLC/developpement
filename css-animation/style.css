@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #252525;
+    overflow: hidden;
+}
+.box_blocs{
+    background-color: rgb(255, 255, 255,0.8);
+    height: 50vh;
+    width: 200%;
+    position: relative;
+    display: flex;
+        align-items: flex-end;
+}
+.box_blocs .blocs{
+    background-color: red;
+    width: 50px;
+    margin: 5px;
+    border-radius: 20px;
+    position: absolute;
+        bottom: 0;
+    animation: blocs infinite 10s linear;
+}
+.box_blocs .blocs:nth-child(1){
+    /* background-color: red; */
+    /* animation: bloc1 infinite 5s 0s linear; */
+    animation-delay: 0s;
+}
+.box_blocs .blocs:nth-child(2){
+    /* background-color: green; */
+    /* animation: bloc2 infinite 5s 1s linear; */
+    animation-delay: 1s;
+}
+.box_blocs .blocs:nth-child(3){
+    /* background-color: blue; */
+    /* animation: bloc3 infinite 5s 2s linear; */
+    animation-delay: 2s;
+}
+.box_blocs .blocs:nth-child(4){
+    /* background-color: purple; */
+    /* animation: bloc4 infinite 5s 3s linear; */
+    animation-delay: 3s ;
+}
+.box_blocs .blocs:nth-child(5){
+    /* background-color: black; */
+    /* animation: bloc5 infinite 5s 4s linear; */
+    animation-delay: 4s;
+}
+.box_blocs .blocs:nth-child(6){
+    animation-delay: 5s;
+}
+.box_blocs .blocs:nth-child(7){
+    animation-delay: 6s;
+}
+.box_blocs .blocs:nth-child(8){
+    animation-delay: 7s;
+}
+.box_blocs .blocs:nth-child(9){
+    animation-delay: 8s;
+}
+.box_blocs .blocs:nth-child(10){
+    animation-delay: 9s;
+}
+
+
+@keyframes  blocs {
+    0%{left: -5%; height: 200px;}
+    25%{height: 50px;}
+    50%{height: 200px;}
+    75%{height: 20px;}
+    100%{left:  115%; height: 200px;}
+}
+/* @keyframes  bloc2 {
+    0%{left: -5%; height: 200px;}
+    25%{height: 50px;}
+    50%{height: 200px;}
+    75%{height: 20px;}
+    100%{left:  115%; height: 200px;}
+}
+@keyframes  bloc3 {
+    0%{left: -5%; height: 200px;}
+    25%{height: 50px;}
+    50%{height: 200px;}
+    75%{height: 20px;}
+    100%{left: 115%; height: 200px;}
+}
+@keyframes  bloc4 {
+    0%{left: -5%; height: 200px;}
+    25%{height: 50px;}
+    50%{height: 200px;}
+    75%{height: 20px;}
+    100%{left:  115%; height: 200px;}
+}
+@keyframes  bloc5 {
+    0%{left: -5%; height: 200px;}
+    25%{height: 50px;}
+    50%{height: 200px;}
+    75%{height: 20px;}
+    100%{left:  115%; height: 200px;}
+} */

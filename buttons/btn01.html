@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btn 01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+        body{
+            min-height: 100vh;
+            background-color: #252525;
+        }
+        header{
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .menu{
+            padding: 10px 20px;
+            border: solid 1px green;
+            border-radius: 10px;
+            box-shadow: 0 20px 100px greenyellow;
+        }
+        .desactive{
+            display: none;
+        }
+        .active{
+            display: block;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a id="menu" class="menu" href="#!">Menu</a>
+    </header>
+
+    <div id="contenue"></div>
+
+    <div id="nav" class="nav desactive ">
+        <h1>nav</h1>
+        <ul>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ul>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function(){
+            $("#menu").click(function(){
+                $("#nav").fadeToggle(500, function(){
+                    $("#nav").addClass("active").removeClass("desactive");
+                })
+
+                console.log("je click")
+                
+            });
+        });
+    </script>
+</body>
+</html>

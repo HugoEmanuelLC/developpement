@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            --taille: 5em;
+            --tailleEspace: 3em;
+            --filter-distance: -9.5em;
+            --filter-blur: blur(60px);
+        }
+        body{
+            display: flex;
+                justify-content: center;
+                align-items: center;
+            min-height: 100vh;
+            background-color: black;
+            transform-style: preserve-3d;
+            font-size: 50px;
+        }
+        .cub{
+            position: relative;
+            height: var(--taille);
+            width: var(--taille);
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg);
+            animation: cub 20s linear infinite;
+        }
+        @keyframes cub
+        {
+            0%{
+                transform: rotateX(-30deg) 
+                rotateY(0deg);
+            }
+
+            100%{
+                transform: rotateX(-30deg) 
+                rotateY(360deg);
+            }
+        }
+        .cub div{
+            position: absolute;
+                top: 0;
+                left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        }
+        .cub div span{
+            position: absolute;
+                top: 0;
+                left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#151515 , #00ec00);
+            transform: rotateY(calc(90deg * var(--i))) translateZ(var(--tailleEspace));
+        }
+        .top{
+            position: absolute;
+                top: 0;
+                left: 0;
+            width: var(--taille);
+            height: var(--taille);
+            background-color: #151515;
+            transform: rotateX(90deg) translateZ(var(--tailleEspace));
+        }
+        .top::before{
+            background-color: #00ec00;
+            content: "";
+            position: absolute;
+                top: 0;
+                left: 0;
+            width: var(--taille);
+            height: var(--taille);
+            transform: translateZ(var(--filter-distance));
+            filter: var(--filter-blur) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="cub">
+        <div class="top"></div>
+        <div>
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+    </div>
+</body>
+</html>
