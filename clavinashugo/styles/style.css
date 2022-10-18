@@ -1,9 +1,11 @@
+@import "https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: 400ms;
     font-family: 'Courier New', Courier, monospace;
+    /* font-weight: bold; */
 }
 :root{
     --colorBgHeader: #252525;
@@ -19,10 +21,31 @@
 body{
     font-size: 20px;
 }
+.page{
+    background-color: #151515;
+    min-height: 100vh;
+}
 a{
     color: var(--colorClair);
     padding: 5px 10px;
     text-decoration: none;
+}
+::-webkit-scrollbar{
+    background-color: black;
+    pointer-events: visible;
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #004d00; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #00ec00;
 }
 
 
@@ -33,8 +56,8 @@ a{
 header{
     background-color: var(--colorBgHeader);
     color: var(--colorClair);
-    position: relative;
-    z-index: 10;
+    /* position: relative; */
+    /* z-index: 10; */
 }
 header, 
 header .links{
@@ -55,16 +78,14 @@ header .links{
 
 .box_contenue_cub{
     background-color: black;
-    position: absolute;
-        top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
         justify-content: center;
         align-items: center;
 }
 .box_contenue_cub .sous_box_contenue_cub{
-    background-color: rgb(37, 37, 37,0.3);
+    background-color: #2525254d;
     width: 80%;
     height: 80%;
     /* border: solid 2px green; */
@@ -113,13 +134,16 @@ header .links{
 .cub .spanA{
     height: 100%;
     width: 100%;
+    font-weight: bold;
     text-align: center;
     display: flex;
         justify-content: center;
         align-items: center;
+    cursor: pointer;
 }
 .cub .spanA:hover{
     background-color: #00ec00;
+    color: #252525;
 }
 .top{
     position: absolute;
@@ -140,4 +164,67 @@ header .links{
     height: var(--taille);
     transform: translateZ(var(--filter-distance));
     filter: var(--filter-blur) ;
+}
+
+
+
+
+
+.contact{
+    background-color: rgb(0, 0, 0,0.8);
+    position: fixed;
+        top: 0;
+    font-size: 0.8em;
+    height: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+.contact span{
+    position: absolute;
+        top: 20px;
+        left: 20px;
+    padding: 10px 12px;
+    background-color: #004d00;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.contact span:hover{
+    background-color: #00ec00;
+}
+.contact span i{
+    display: flex;
+}
+.contact ul{
+    background-color: rgb(42, 42, 42,0.8);
+    height: 90%;
+    width: 90%;
+    margin: 5% auto 5%;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+/* .contact ul div{
+    border: solid 2px white;
+} */
+.contact ul li{
+    color: white;
+    display: flex;
+        justify-content: flex-start;
+        align-items: center;
+}
+
+.contact ul li{
+    text-shadow: 1px 1px 1px #00ec00;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.hide{
+    left: -101vw;
+}
+.show{
+    left: 0;
+    transition: 400ms;
 }
