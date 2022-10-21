@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 400ms;
+    transition: 500ms;
     font-family: 'Courier New', Courier, monospace;
     /* font-weight: bold; */
 }
@@ -56,7 +56,8 @@ a{
 header{
     background-color: var(--colorBgHeader);
     color: var(--colorClair);
-    /* position: relative; */
+    position: sticky;
+        top: 0;
     /* z-index: 10; */
 }
 header, 
@@ -174,9 +175,7 @@ header .links{
     background-color: rgb(0, 0, 0,0.8);
     position: fixed;
         top: 0;
-    font-size: 0.8em;
     height: 90%;
-    width: 100%;
     margin: 0 auto;
 }
 .contact span{
@@ -216,15 +215,23 @@ header .links{
 }
 
 .contact ul li{
-    text-shadow: 1px 1px 1px #00ec00;
     font-weight: bold;
     font-size: 1.5em;
 }
 
 .hide{
-    left: -101vw;
+    left: -105vw;
+    width: 10%;
+}
+.hide ul li{
+    font-size: 0;
+    text-shadow: none;
 }
 .show{
     left: 0;
-    transition: 400ms;
+    width: 100%;
+}
+.show ul li{
+    font-size: 0.8em;
+    transition: 200ms;
 }
