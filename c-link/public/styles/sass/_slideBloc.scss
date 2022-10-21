@@ -1,0 +1,75 @@
+.slideBloc{
+    height: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.slideBloc span{
+    position: absolute;
+        top: 20px;
+        left: 20px;
+    padding: 10px 12px;
+    background-color: #004d00;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.slideBloc span:hover{
+    background-color: #00ec00;
+}
+.slideBloc span i{
+    display: flex;
+}
+
+.slideBloc .text{
+    margin: 20px;
+    min-height: 50%;
+    max-width: 800px;
+}
+
+.slideBloc ul{
+    background-color: rgb(42, 42, 42,0.8);
+    height: 90%;
+    width: 90%;
+    margin: 5% auto 5%;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.slideBloc ul li{
+    color: white;
+    display: flex;
+        justify-content: flex-start;
+        align-items: center;
+}
+
+.slideBloc ul li{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+
+
+
+.hideAndShow{
+    position: fixed;
+        top: 0;
+}
+.hide{
+    left: -105vw;
+    width: 10%;
+}
+.hide ul li{
+    font-size: 0;
+    text-shadow: none;
+}
+.show{
+    left: 0;
+    width: 100%;
+}
+.show ul li{
+    font-size: 0.8em;
+    transition: 200ms;
+}
