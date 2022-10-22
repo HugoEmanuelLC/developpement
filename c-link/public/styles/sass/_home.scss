@@ -1,0 +1,82 @@
+
+// .contener_home{
+//     background-color: darkred;
+// }
+.pub{
+    height: 20vh;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    border-bottom: solid 10px #581845;
+}
+section{
+    display: flex;
+}
+section .body{
+    flex: 1;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+}
+section .nav_side_left{
+    padding: 10px;
+}
+section .nav_side_left select{
+    width: 100%;
+    text-align: center;
+}
+section .nav_side_left select option{
+    padding: 4px;
+}
+section .body .articles{
+    // border: solid 2px yellow;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+section .body .articles .item{
+    // border: solid 2px red;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    position: relative;
+    margin: 10px;
+}
+section .body .articles .item span{
+    position: absolute;
+        top: 5px;
+        right: 5px;
+    font-size: 0.7em;
+    background-color: rgb(255, 0, 0,0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+section .body .articles .item span:hover{
+    background-color: red;
+}
+section .body .articles .item .imgBg{
+    background-image: url('https://wonderfulengineering.com/wp-content/uploads/2016/02/iron-man-wallpaper-22.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+        top: 0;
+        left: 0;
+}
+section .body .articles .item .description{
+    background-color: rgb(0, 0, 0,0.5);
+    color: white;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+        bottom: 0;
+        right: 0;
+}

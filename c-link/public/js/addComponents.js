@@ -4,7 +4,7 @@ var routes = [
     {path: "#/notfound", name: "notfound"},
     {path: "#/", name: "home"},
     {path: "#/home", name: "home"},
-    // {path: "#/about", name: "about"},
+    {path: "#/recherche", name: "recherche"},
     {path: "#/page1", name: "page"},
     // {path: "#/contact", name: "contact"},
 ];

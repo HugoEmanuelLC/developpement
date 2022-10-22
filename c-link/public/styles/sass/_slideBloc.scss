@@ -1,10 +1,10 @@
-.slideBloc{
+#addContener .slideBloc{
     height: 100%;
     display: flex;
         justify-content: center;
         align-items: center;
 }
-.slideBloc span{
+#addContener .slideBloc span{
     position: absolute;
         top: 20px;
         left: 20px;
@@ -14,20 +14,20 @@
     cursor: pointer;
     border-radius: 15px;
 }
-.slideBloc span:hover{
+#addContener .slideBloc span:hover{
     background-color: #00ec00;
 }
-.slideBloc span i{
+#addContener .slideBloc span i{
     display: flex;
 }
 
-.slideBloc .text{
+#addContener .slideBloc .text{
     margin: 20px;
     min-height: 50%;
     max-width: 800px;
 }
 
-.slideBloc ul{
+#addContener .slideBloc ul{
     background-color: rgb(42, 42, 42,0.8);
     height: 90%;
     width: 90%;
@@ -37,14 +37,14 @@
         justify-content: center;
         align-items: center;
 }
-.slideBloc ul li{
+#addContener .slideBloc ul li{
     color: white;
     display: flex;
         justify-content: flex-start;
         align-items: center;
 }
 
-.slideBloc ul li{
+#addContener .slideBloc ul li{
     font-weight: bold;
     font-size: 1.5em;
 }
@@ -56,6 +56,7 @@
 .hideAndShow{
     position: fixed;
         top: 0;
+    z-index: 10;
 }
 .hide{
     left: -105vw;

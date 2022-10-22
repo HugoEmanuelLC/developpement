@@ -1,5 +1,7 @@
 .contener{
-    width: 100%;
+    background-color: blue;
+    width: 90%;
+    min-height: 90vh;
     margin: auto ;
     // display: flex;
     //     flex-direction: column;
@@ -24,7 +26,7 @@
     margin-left: 10%;
     position: relative;
 }
-.contener .imgBg .text button{
+.contener button{
     position: absolute;
         bottom: -40px;
     padding: 10px 20px;
@@ -37,7 +39,7 @@
     overflow: hidden;
     transform: skew(-30deg);
 }
-.contener .imgBg .text button::before{
+.contener button::before{
     content: "";
     position: absolute;
         top: -15px;
@@ -47,7 +49,7 @@
     background-color: var(--textColorDark);
     transform: rotateZ(45deg);
 }
-.contener .imgBg .text button::after{
+.contener button::after{
     content: "";
     position: absolute;
         bottom: -15px;
@@ -56,4 +58,35 @@
     height: 40px;
     background-color: var(--textColorDark);
     transform: rotateZ(45deg);
+}
+
+.contener .gallery{
+    display: flex;
+    overflow-x: scroll;
+}
+.contener .gallery span{
+    background-color: green;
+    height: 200px;
+    min-width: 200px;
+    margin: 5px;
+}
+
+.contener .nav ul{
+    display: flex;
+}
+.contener .nav ul li{
+    width: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.contener .nav ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.contener .nav ul li a:hover{
+    background-color: orangered;
 }

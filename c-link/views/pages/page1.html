@@ -1,3 +1,26 @@
+<div id="about" class="slideBloc bgColorLight hideAndShow">
+    <span><i class="fa-solid fa-circle-xmark"></i></span>
+    <div class="text">
+        <h1>page 1</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Quibusdam odio magni numquam quia impedit. Saepe eum hic aliquid? Quas, eos.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Quibusdam odio magni numquam quia impedit. Saepe eum hic aliquid? Quas, eos.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Quibusdam odio magni numquam quia impedit. Saepe eum hic aliquid? Quas, eos.</p>
+    </div>
+</div>
+
+<div id="contact" class="slideBloc bgColorLight hideAndShow">
+    <span><i class="fa-solid fa-circle-xmark"></i></span>
+    <h1>CONTACT</h1>
+</div>
+
+<div id="photos" class="slideBloc bgColorLight hideAndShow">
+    <span><i class="fa-solid fa-circle-xmark"></i></span>
+    <h1>PHOTOS</h1>
+</div>
+
 <div class="contener">
 
     <div class="imgBg">
@@ -8,6 +31,22 @@
         </div>
     </div>
 
+    <div class="nav">
+        <ul>
+            <li><a class="a-photos">Fotos</a></li>
+            <li><a class="a-about">About</a></li>
+            <li><a class="a-contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="gallery">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
 </div>
 
 
@@ -16,5 +55,23 @@
     
     msg = title +"| page"
     $("title").text(msg)
+
+    $(".slideBloc").addClass("hide") //"slide bloc" desactive par default
+
+    $(".a-about").click(function () { //activer le "slide bloc"
+        $("#about").addClass("show")
+    })
+
+    $(".a-contact").click(function () { //activer le "slide bloc"
+        $("#contact").addClass("show")
+    })
+
+    $(".a-photos").click(function () { //activer le "slide bloc"
+        $("#photos").addClass("show")
+    })
+
+    $(".slideBloc span").click(function () { //desactiver le "slide bloc"
+        $(".slideBloc").addClass("hide").removeClass("show")
+    })
 
 </script>
