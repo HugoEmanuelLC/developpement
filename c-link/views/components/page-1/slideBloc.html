@@ -21,41 +21,7 @@
     <h1>PHOTOS</h1>
 </div>
 
-<div class="contener">
-
-    <div class="imgBg">
-        <div class="text">
-            <h1>PAGE 1</h1>
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <button>Button</button>
-        </div>
-    </div>
-
-    <div class="nav">
-        <ul>
-            <li><a class="a-photos">Fotos</a></li>
-            <li><a class="a-about">About</a></li>
-            <li><a class="a-contact">Contact</a></li>
-        </ul>
-    </div>
-
-    <div class="gallery">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-</div>
-
-
-
 <script>
-    
-    msg = title +"| page"
-    $("title").text(msg)
-
     $(".slideBloc").addClass("hide") //"slide bloc" desactive par default
 
     $(".a-about").click(function () { //activer le "slide bloc"
@@ -73,5 +39,4 @@
     $(".slideBloc span").click(function () { //desactiver le "slide bloc"
         $(".slideBloc").addClass("hide").removeClass("show")
     })
-
 </script>

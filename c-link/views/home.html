@@ -1,0 +1,77 @@
+<div id="add_component_slide_bloc"></div>
+
+<div class="contener_home">
+    <div id="presentation">
+        <h1>C-link.com</h1>
+        <p>Plataforma de ajuda as Empresas pequenas para uma melhor vesibilidade ao nivel nacional</p>
+    </div>
+
+    <div class="pub">
+        <h3>Pub</h3>
+    </div>
+
+    <section>
+        <div class="nav_side_left">
+            <form action="#/home" method="get">
+                <label for="">Metiers:</label>
+                <div>
+                    <label for="elec">elec:</label>
+                    <input type="radio" name="metiers" value="0" id="elec">
+                </div>
+
+                <div>
+                    <label for="info">info:</label>
+                    <input type="radio" name="metiers" value="1" id="info">
+                </div>
+
+                <div>
+                    <label for="cana">cana:</label>
+                    <input type="radio" name="metiers" value="2" id="cana">
+                </div>
+
+                <br>
+                <label for="">Regions:</label>
+                <div>
+                    <label for="elec">elec:</label>
+                    <input type="radio" name="regions" value="0" id="elec">
+                </div>
+
+                <div>
+                    <label for="info">info:</label>
+                    <input type="radio" name="regions" value="1" id="info">
+                </div>
+
+                <div>
+                    <label for="cana">cana:</label>
+                    <input type="radio" name="regions" value="2" id="cana">
+                </div>
+
+                <br>
+                <input type="submit" value="RECHERCHE">
+            </form>
+        </div>
+
+        <div class="body">
+            <h1>Body section</h1>
+
+            <div class="articles"></div>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+<script>
+    msg = title + "| HOME"
+    $("title").text(msg)
+
+    let file_component_slide_bloc = "views/components/home/slideBloc.html";
+    $("#add_component_slide_bloc").prependTo(function () {
+        $("#add_component_slide_bloc").load(file_component_slide_bloc)
+    })
+</script>

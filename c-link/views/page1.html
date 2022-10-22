@@ -1,0 +1,41 @@
+<div id="add_component_slide_bloc"></div>
+
+<div class="contener">
+
+    <div class="imgBg">
+        <div class="text">
+            <h1>PAGE 1</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <button>Button</button>
+        </div>
+    </div>
+
+    <div class="nav">
+        <ul>
+            <li><a class="a-photos">Fotos</a></li>
+            <li><a class="a-about">About</a></li>
+            <li><a class="a-contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="gallery">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+
+
+
+<script>
+    msg = title +"| page"
+    $("title").text(msg)
+    
+    let file_component_slide_bloc = "views/components/page-1/slideBloc.html";
+    $("#add_component_slide_bloc").prependTo(function () {
+        $("#add_component_slide_bloc").load(file_component_slide_bloc)
+    })
+</script>

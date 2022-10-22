@@ -4,7 +4,7 @@ var routes = [
     {path: "#/notfound", name: "notfound"},
     {path: "#/", name: "home"},
     {path: "#/home", name: "home"},
-    {path: "#/recherche", name: "recherche"},
+    // {path: "#/recherche", name: "home"},
     {path: "#/page1", name: "page"},
     // {path: "#/contact", name: "contact"},
 ];
@@ -18,7 +18,7 @@ console.log(hash)
 
     if (hash.startsWith("#/") && hash.length>2){
         hash = hash.replace("#/", "");
-        var file = "views/pages/" + hash + ".html";
+        var file = "views/" + hash + ".html";
 
         for (let ind = 0; ind < routes.length; ind++) {
             const route = routes[ind];
