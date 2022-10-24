@@ -1,6 +1,8 @@
-
-$(function(){
-    $("header button").click(function(){//changement de coulor light ou dark
-        $("body, .page").toggleClass("bgColorDark")
-    })  
-})
+$(function () {
+    $("#txtDate").datepicker({
+        showOn: 'button',
+        buttonImageOnly: true,
+        buttonImage: 'images/calendar.gif',
+        dateFormat: 'dd/mm/yy'
+    });
+});

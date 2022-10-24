@@ -9,28 +9,20 @@
         align-items: center;
     border-bottom: solid 10px #581845;
 }
+
+
 section{
     display: flex;
 }
 section .body{
+    position: relative;
     flex: 1;
     min-height: 80vh;
     display: flex;
-    flex-direction: column;
+        flex-direction: column;
         align-items: center;
 }
-section .nav_side_left{
-    padding: 10px;
-}
-section .nav_side_left select{
-    width: 100%;
-    text-align: center;
-}
-section .nav_side_left select option{
-    padding: 4px;
-}
 section .body .articles{
-    // border: solid 2px yellow;
     width: 100%;
     padding-top: 100px;
     display: flex;
@@ -38,12 +30,17 @@ section .body .articles{
         justify-content: center;
 }
 section .body .articles .item{
-    // border: solid 2px red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 300px;
     width: 400px;
     display: flex;
     position: relative;
     margin: 10px;
+    box-shadow: 0 4px 4px rgb(0, 0, 0,0.7);
+    border-radius: 10px;
+    overflow: hidden;
 }
 section .body .articles .item span{
     position: absolute;
@@ -58,25 +55,98 @@ section .body .articles .item span{
 section .body .articles .item span:hover{
     background-color: red;
 }
-section .body .articles .item .imgBg{
-    background-image: url('https://wonderfulengineering.com/wp-content/uploads/2016/02/iron-man-wallpaper-22.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-    left: 0;
-    width: 70%;
-    height: 70%;
-    position: absolute;
-        top: 0;
-        left: 0;
+section .body .articles .item ul{
+    width: 100%;
+    display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
 }
-section .body .articles .item .description{
-    background-color: rgb(0, 0, 0,0.5);
+
+section .body .articles .item ul .heart{
+    background-color: var(--colorVin);
+    border-radius: 0 0 10px 0;
+    padding: 4px;
     color: white;
-    right: 0;
-    width: 70%;
-    height: 70%;
+}
+section .body .articles .item ul .plusinfo a{
+    background-color: var(--colorVin);
+    cursor: pointer;
+    color: white;
+    border-radius: 0 0 0 10px;
+}
+section .body .articles .item ul .plusinfo a:hover{
+    background-color: #58184583;
+    cursor: pointer;
+
+}
+
+section .body .articles .item .description{
+    background-color: rgb(0, 0, 0,0.8);
+    color: white;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+        bottom: 0;
+    padding: 10px;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+section .body .articles .item .description h3{
+    text-align: center;
+}
+
+
+
+section .body .slideMenuFiltre{
+    position: absolute;
+        top: -2px;
+        left: -2px;
+}
+section .body .slideMenuFiltre i{
+    background-color: var(--colorVin);
+    color: white;
+    padding: 7px 8px;
+    border-radius: 0 50% 50% 50%;
+    cursor: pointer;
+    // border: solid 2px white;
+}
+
+
+section .nav_side_left{
+    background-color: var(--colorVin);
+    padding: 10px;
+    color: white;
+    position: relative;
+}
+section .nav_side_left form .group{
+    box-shadow: 0 4px 4px rgb(0, 0, 0,0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+section .nav_side_left form .group div{
+    border-radius: 5px;
+    border: solid 1px;
+    padding: 4px 10px;
+    display: flex;
+        justify-content: space-between;
+}
+section .nav_side_left form .submit{
+    background-color: #215818;
+    color: white;
+    box-shadow: 0 4px 4px rgb(0, 0, 0,0.7);
+    padding: 4px 10px;
+}
+section .nav_side_left form .submit:hover{
+    box-shadow: 0 0 0 rgb(0, 0, 0,1);
+}
+
+
+section .nav_side_left .connection{
+    color: white;
     position: absolute;
         bottom: 0;
         right: 0;
+    
+
 }

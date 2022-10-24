@@ -34,8 +34,10 @@
     msg = title +"| page"
     $("title").text(msg)
     
-    let file_component_slide_bloc = "views/components/page-1/slideBloc.html";
-    $("#add_component_slide_bloc").prependTo(function () {
-        $("#add_component_slide_bloc").load(file_component_slide_bloc)
+    $(function(){
+        let file_component_slide_bloc = "views/components/page-1/slideBloc.html";
+        $("#add_component_slide_bloc").prependTo(function () {
+            $("#add_component_slide_bloc").load(file_component_slide_bloc)
+        })
     })
 </script>
