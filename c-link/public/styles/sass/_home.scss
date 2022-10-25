@@ -1,14 +1,55 @@
 
-// .contener_home{
-//     background-color: darkred;
-// }
-.pub{
-    height: 20vh;
+
+.blocFiltre{
+    padding: 50px;
+    min-height: 50vh;
+    background-color: var(--colorChocolat);
+    color: white;
     display: flex;
         justify-content: center;
         align-items: center;
-    border-bottom: solid 10px #581845;
 }
+.blocFiltre form{
+    // border: solid black 4px;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.blocFiltre form .submit{
+    padding: 5px 15px;
+    box-shadow: var(--shadowBloc);
+    border-radius: 5px;
+}
+.blocFiltre form .blocGroups{
+    display: flex;
+        flex-wrap: wrap;
+}
+.blocFiltre form .group{
+    box-shadow: var(--shadowBloc);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px ;
+}
+.blocFiltre form .group .groupLabel{
+    text-decoration: underline;
+    // padding: 0 0 50px;
+}
+.blocFiltre form .group .items{
+    height: 150px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+.blocFiltre form .group .items div{
+    background-color: white;
+    color: black;
+    padding: 4px;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+
 
 
 section{
@@ -63,19 +104,19 @@ section .body .articles .item ul{
 }
 
 section .body .articles .item ul .heart{
-    background-color: var(--colorVin);
+    background-color: var(--colorChocolat);
     border-radius: 0 0 10px 0;
     padding: 4px;
     color: white;
 }
 section .body .articles .item ul .plusinfo a{
-    background-color: var(--colorVin);
+    background-color: var(--colorChocolat);
     cursor: pointer;
     color: white;
     border-radius: 0 0 0 10px;
 }
 section .body .articles .item ul .plusinfo a:hover{
-    background-color: #58184583;
+    background-color: green;
     cursor: pointer;
 
 }
@@ -104,7 +145,7 @@ section .body .slideMenuFiltre{
         left: -2px;
 }
 section .body .slideMenuFiltre i{
-    background-color: var(--colorVin);
+    background-color: var(--colorChocolat);
     color: white;
     padding: 7px 8px;
     border-radius: 0 50% 50% 50%;
@@ -114,7 +155,7 @@ section .body .slideMenuFiltre i{
 
 
 section .nav_side_left{
-    background-color: var(--colorVin);
+    background-color: var(--colorChocolat);
     padding: 10px;
     color: white;
     position: relative;
@@ -147,6 +188,13 @@ section .nav_side_left .connection{
     position: absolute;
         bottom: 0;
         right: 0;
-    
+}
 
+
+
+
+@media screen and (max-width: 800px) {
+    .blocFiltre form .group{
+        width: 80%;
+    }
 }

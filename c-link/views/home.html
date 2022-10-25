@@ -1,13 +1,104 @@
 <div id="add_component_slide_bloc"></div>
 
-<div class="contener_home">
-    <div id="presentation">
-        <h1>C-link.com</h1>
-        <p>Plataforma de ajuda as Empresas pequenas para uma melhor vesibilidade ao nivel nacional</p>
+<header>
+    <div class="shadow">
+
+        <div class="logo">
+            <h2><a href="./">logo C-Link</a></h2>
+
+            <ul>
+                <li><a class="a-about">A bout <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#/contact">Contact <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="description">
+            <h1>C-Link</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate, laboriosam doloremque quasi dolorem laudantium repellendus veritatis voluptas ipsam cum.
+                Minima.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam, molestias accusamus
+                consequatur incidunt obcaecati dolore hic delectus,
+                sapiente voluptates quibusdam quis eaque numquam optio esse placeat. Veniam, quod mollitia!</p>
+        </div>
     </div>
+</header>
+
+<div class="contener_home">
 
     <div class="pub">
-        <h3>Pub</h3>
+        <img src="public/images/Portugal.png" alt="">
+    </div>
+
+    <div class="blocFiltre">
+        <form action="#/home" method="get">
+            <div class="blocGroups">
+
+                <div class="group">
+                    <label class="groupLabel" for="">
+                        <h3>Metiers:</h3>
+                    </label>
+
+                    <div class="items">
+                        <div>
+                            <label for="electricien">electricien:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" name="metiers" value="0" id="electricien">
+                        </div>
+
+                        <div>
+                            <label for="informatico">informatico:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" name="metiers" value="1" id="informatico">
+                        </div>
+
+                        <div>
+                            <label for="canalisador">canalisador:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" name="metiers" value="2" id="canalisador">
+                        </div>
+
+                        <div>
+                            <label for="electricien">electricien:&nbsp;</label>
+                            <input type="radio" name="metiers" value="3" id="electricien">
+                        </div>
+
+                        <div>
+                            <label for="informatico">informatico:&nbsp;</label>
+                            <input type="radio" name="metiers" value="4" id="informatico">
+                        </div>
+
+                        <div>
+                            <label for="canalisador">canalisador:&nbsp;</label>
+                            <input type="radio" name="metiers" value="5" id="canalisador">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="group">
+                    <label class="groupLabel" for="">
+                        <h3>Regions:</h3>
+                    </label>
+                    <div class="items">
+                        <div>
+                            <label for="alentejo">alentejo:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" name="regions" value="0" id="alentejo">
+                        </div>
+
+                        <div>
+                            <label for="algarve">algarve:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" name="regions" value="1" id="algarve">
+                        </div>
+
+                        <div>
+                            <label for="lisboa">lisboa:&nbsp;&nbsp;&nbsp;</label>
+                            <input type="radio" name="regions" value="2" id="lisboa">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <input class="submit" type="submit" value="RECHERCHE">
+        </form>
     </div>
 
     <section>
@@ -70,7 +161,7 @@
             <h1>Body section</h1>
 
             <div class="articles">
-                <div class="item item1" >
+                <div class="item item1">
                     <div class="description">
                         <h3>Star Industrie</h3>
                         <h4>Ville:</h4>
@@ -82,7 +173,7 @@
                     </ul>
                 </div>
 
-                
+
                 <div class="item item2">
                     <div class="description">
                         <h3>SHIELD</h3>
@@ -111,10 +202,10 @@
     $("title").text(msg)
 
     $(function () {
-        
-    $("#hideShow").click(function(){//changement de coulor light ou dark
-        $("body, .page").toggleClass("bgColorDark")
-    })  
+
+        $("#hideShow").click(function () { //changement de coulor light ou dark
+            $("body, .page").toggleClass("bgColorDark")
+        })
         let file_component_slide_bloc = "views/components/home/slideBloc.html";
         $("#add_component_slide_bloc").prependTo(function () {
             $("#add_component_slide_bloc").load(file_component_slide_bloc)
@@ -129,7 +220,7 @@
         "background-image": "url('https://wallpapercave.com/wp/wp1928401.jpg')"
     })
 
-    $(".slideMenuFiltre i").click(function(){
+    $(".slideMenuFiltre i").click(function () {
         $(".nav_side_left").toggleClass("showBlock")
     })
 </script>

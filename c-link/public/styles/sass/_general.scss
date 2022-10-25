@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: 300ms;
-    font-family:'Arial Narrow', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
 }
 :root{
     --bgColorLight: #E6E6E6;
@@ -11,14 +11,18 @@
     --textColorLight: #E6E6E6;
     --textColorDark: #1C1C1C;
     --colorVin: #581845;
+    --colorChocolat: chocolate;
 
     --fontSizeText: 0.8em; 
     --fontSizeTitre: 1.4em; 
     --fontSizeSousTitre: 1em; 
+
+    --shadowBloc: 2px 2px 4px black;
+    --shadowText: 2px 2px 2px black;
     
 }
 body{
-    font-size: 16px;
+    font-size: 18px;
 }
 .page{
     min-height: 100vh;
@@ -79,7 +83,7 @@ p,a{
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--colorVin); 
+    background: var(--colorChocolat); 
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {

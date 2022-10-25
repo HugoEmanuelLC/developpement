@@ -10,12 +10,26 @@
     </div>
 </div>
 
+<div id="contact" class="slideBloc bgColorLight hideAndShow">
+    <span><i class="fa-solid fa-circle-xmark"></i></span>
+    <div class="text">
+        
+    </div>
+</div>
+
+
+
 <script>
     $(".slideBloc").addClass("hide") //"slide bloc" desactive par default
 
     $(".a-about").click(function () { //activer le "slide bloc"
         $("#about").addClass("show")
     })
+
+    $(".a-contact").click(function () { //activer le "slide bloc"
+        $("#contact").addClass("show")
+    })
+
     $(".slideBloc span").click(function () { //desactiver le "slide bloc"
         $(".slideBloc").addClass("hide").removeClass("show")
     })

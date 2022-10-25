@@ -1,0 +1,13 @@
+
+.pub{
+    height: 30vh;
+    padding: 20px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    border-top: solid 5px var(--colorChocolat);
+    border-bottom: solid 10px var(--colorChocolat);
+}
+.pub img{
+    max-height: 100%;
+}
