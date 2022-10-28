@@ -34,6 +34,19 @@ body{
     font-size: 3em;
 }
 
+.settings{
+    // padding: 2px;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+.settings button{
+    font-size: 0.5em;
+}
+.settings .connection{
+    padding: 2px;
+}
+
 .bgColorLight{
     background-color: var(--bgColorLight);
     color: var(--textColorDark);

@@ -39,8 +39,8 @@
                         <h3>Metiers:</h3>
                     </label>
 
-                    <div class="items">
-                        <div>
+                    <div class="items metiers">
+                        <!--<div>
                             <label for="electricien">electricien:&nbsp;&nbsp;&nbsp;</label>
                             <input type="radio" name="metiers" value="0" id="electricien">
                         </div>
@@ -68,7 +68,7 @@
                         <div>
                             <label for="canalisador">canalisador:&nbsp;</label>
                             <input type="radio" name="metiers" value="5" id="canalisador">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
@@ -102,10 +102,7 @@
     </div>
 
     <section>
-        <div class="nav_side_left hideBlock">
-
-            <button id="hideShow"><i class="fa-sharp fa-solid fa-circle-half-stroke"></i>&nbsp; dark/light</button>
-
+        <!--<div class="nav_side_left hideBlock">
             <form action="#/home" method="get">
                 <div class="group">
                     <label for="">Metiers:</label>
@@ -148,17 +145,25 @@
                 <br>
                 <input class="submit" type="submit" value="RECHERCHE">
             </form>
-
-            <a class="connection" href=""><i class="fa-solid fa-right-to-bracket"></i></a>
-
-        </div>
+        </div>-->
 
         <div class="body">
-            <span class="slideMenuFiltre">
+            <!--<span class="slideMenuFiltre">
                 <i class="fa-regular fa-gear"></i>
-            </span>
+            </span>-->
+
+            <div class="table"></div>
+            <style>
+                .company img{
+                    width: 200px;
+
+                }
+            </style>
+            <div class="company"></div>
 
             <h1>Body section</h1>
+
+            <h1 class="result"></h1>
 
             <div class="articles">
                 <div class="item item1">
@@ -174,7 +179,7 @@
                 </div>
 
 
-                <div class="item item2">
+                <!--<div class="item item2">
                     <div class="description">
                         <h3>SHIELD</h3>
                         <h4>Ville:</h4>
@@ -184,7 +189,7 @@
                         <li class="heart"><i class="fa-solid fa-heart"></i>&nbsp; 25</li>
                         <li class="plusinfo"><a href="#/page1">+ info</a></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
@@ -197,6 +202,7 @@
 
 
 
+<script type="text/javascript" charset="utf-8" src="public/js/company.js"></script>
 <script>
     msg = title + "| HOME"
     $("title").text(msg)
@@ -220,7 +226,9 @@
         "background-image": "url('https://wallpapercave.com/wp/wp1928401.jpg')"
     })
 
-    $(".slideMenuFiltre i").click(function () {
-        $(".nav_side_left").toggleClass("showBlock")
-    })
+    //$(".slideMenuFiltre i").click(function () {
+    //    $(".nav_side_left").toggleClass("showBlock")
+    //})
+
+
 </script>
