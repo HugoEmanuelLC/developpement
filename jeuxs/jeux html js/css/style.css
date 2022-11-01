@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #252525;
+    overflow: hidden;
+}
+
+#contener{
+    background-color: green;
+    position: relative;
+    margin: 5vh auto;
+    width: 1000px;
+    height: 500px;
+}
+
+#lienZo{
+    background-color: aqua;
+}
+
+#contener button{
+    display: block;
+    position: relative;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#vertical{
+    display: none;
+}
+
+
+
+@media all and (orientation: portrait) {
+    #contener{
+        display: none;
+    }
+
+    #vertical{
+        /* background-color: red; */
+        background-image: url('../img/IGTV-horizontal-655x470.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
