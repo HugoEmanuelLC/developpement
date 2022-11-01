@@ -1,0 +1,179 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+
+
+/* VARIABLES */
+:root{
+    --test-border-red: solid 3px red;
+    --BG-color-Dark-Blue: #0b073f;
+    --BG-color-Dark-red: #542121;
+    --BG-color-Dark-green: #013a33;
+    --BG-color-Light: #cacaca;
+    --TXT-color-Light: #cacaca;
+    --TXT-color-dark: #0b073f;
+    --border-blue: solid 2px #1c1767;
+    --border-red: solid 2px #6F1B1B;
+    --border-green: solid 2px #015d57;
+    --shadow: 4px 4px 4px rgb(0, 0, 0, 0.8);
+}
+
+
+
+/* GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--TXT-color-Light);
+    text-decoration: none;
+    list-style: none;
+    transition: 200ms;
+}
+
+a{
+    cursor: pointer;
+}
+
+body,
+a,
+li,
+.presentationDePage div,
+header,
+header div,
+footer .body{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+body{
+    background-color: var(--BG-color-Light);
+    overflow-x: hidden;
+    font-size: 14px;
+    flex-direction: column;
+}
+#page,
+footer{
+    width: 100%;
+}
+
+header,
+.presentationDePage,
+footer{
+    background-color: var(--BG-color-Dark-Blue);
+}
+section{
+    padding-bottom: 10px;
+}
+
+
+
+/* HEADER */
+header{
+    border-bottom: var(--border-blue);
+}
+header div{
+    width: 100%;
+}
+header .logo{
+    justify-content: flex-start;
+}
+header .links a{
+    /* width: 100%; */
+    padding: 5px 10px;
+    border-radius: 0 10px;
+}
+header .links a:hover{
+    color: var(--BG-color-Dark-Blue);
+    background-color: var(--BG-color-Light);
+    box-shadow: var(--shadow);
+}
+header .logo{
+    padding-left: 5%;
+}
+header .links{
+    justify-content: space-around;
+}
+
+
+
+/* SECTION */
+.presentationDePage{
+    height: 90vh;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+}
+.presentationDePage div{
+    /* border: solid 2px red; */
+    width: 100%;
+}
+/* .presentationDePage .divLeft{
+} */
+/* .presentationDePage .divRight{
+} */
+
+.filter_search{
+    background-color: var(--BG-color-Dark-green);
+    min-height: 400px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 30px;
+    margin: -50px auto 0;
+    box-shadow: var(--shadow);
+}
+.filter_search h1{
+    text-decoration: underline dashed;
+    text-underline-offset: 8px;
+    padding-bottom: 20px;
+}
+.filter_search form .boxSelect{
+    /* background-color: red; */
+    padding: 10px;
+    display: flex;
+        flex-wrap: wrap;
+}
+
+.filter_search form select{
+    padding: 2px 10px 2px;
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--TXT-color-dark);
+}
+.filter_search form select option{
+    color: var(--TXT-color-dark);
+}
+.filter_search form .submit{
+    margin: 10px;
+    background-color: var(--BG-color-Dark-Blue);
+    color: var(--TXT-color-Light);
+    padding: 2px 10px 2px;
+    border-radius: 5px;
+}
+
+
+
+
+/* FOOTER */
+footer{
+    margin-top: 100px;
+    padding: 8px;
+    border-radius: 30px 30px 0 0;
+}
+footer .body{
+    font-size: 0.9em;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+footer .body div{
+    padding: 20px 0;
+}
+/* footer .body .left{
+} */
+/* footer .body .right{
+} */
+footer .foot{
+    text-align: center;
+    font-size: 0.7em;
+}
