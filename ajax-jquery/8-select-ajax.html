@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+
+    <title>Ejemple 8 JQuery avec Ajax</title>
+</head>
+
+
+<body>
+
+    <form method="post">
+
+        <label for="pais">Pais :</label>
+        <select name="pais" id="pais"></select>
+
+
+        <label for="cidade">Cidade :</label>
+        <select name="cidade" id="cidade"></select>
+
+    </form>
+
+
+
+    <script type="text/javascript">
+
+        const settings = {
+            "url": "https://service.unece.org/trade/locode/af.htm",
+            "method": "GET"
+          };
+          
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
+
+    </script>
+</body>
+</html>

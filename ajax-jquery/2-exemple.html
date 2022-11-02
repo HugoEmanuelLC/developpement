@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <title>Ejemple 2 JQuery</title>
+</head>
+<body>
+    <div id="hello">
+        <h1>hello</h1>
+    </div>
+
+
+
+    <script type="text/javascript">
+        
+
+        /*$(function(){
+
+            let x = $("#hello");
+            x.mouseover(inHover);
+            x.mouseout(outHover);
+    
+            function inHover(){
+                $(this).css("background-color","red");
+            }
+    
+            function outHover(){
+                $(this).css("background-color","green");
+            }
+        })*/
+
+//ou
+
+        $(document).ready(beginner);
+
+        function beginner(){
+            let x = $("#hello");
+            x.mouseover(inHover);
+            x.mouseout(outHover);
+        }
+
+        function inHover(){
+            $(this).css("background-color","red");
+        }
+
+        function outHover(){
+            $(this).css("background-color","green");
+        }
+    </script>
+</body>
+</html>

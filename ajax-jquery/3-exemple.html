@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <title>Ejemple 3 JQuery</title>
+</head>
+<body>
+    
+    <input type="button" name="" id="show" value="Show">
+    <input type="button" name="" id="hide" value="Hide">
+
+    <div id="objectif">
+        <h1>Objectif</h1>
+    </div>
+
+
+
+    <script type="text/javascript">
+        
+        $(document).ready(initier);
+
+        function initier(){
+            let ob = $("#objectif")
+            let sh = $("#show")
+            let hi = $("#hide")
+
+            ob.hide()
+
+            hi.click(function(){
+               //ob.hide()      //sem efeito
+               ob.fadeOut(1000)     //com efeito
+            })
+            sh.click(function(){
+                //ob.show()     //sem efeito
+                ob.fadeIn()     //com efeito
+            })
+        }
+
+        
+
+    </script>
+</body>
+</html>
