@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,19 +28,45 @@
 
     </form>
 
+    <p>not !</p>
+
 
 
     <script type="text/javascript">
+        let p = $("p")
+        let Url = "http://localhost/tests/Api/country.php"
 
-        const settings = {
-            "url": "https://service.unece.org/trade/locode/af.htm",
-            "method": "GET"
-          };
-          
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-          });
+        $.ajax({
+            url: Url,
+            success: function(data, textStatus, XMLHttpRequest){
 
+                console.log(data, textStatus, XMLHttpRequest.responseXML)
+                p.html(" - - " + data)
+                
+            }
+        })
+
+
+
+
+
+        /*$.ajax({
+            url: Url,
+            type: 'get',
+            success: function () {
+                $.map(function (data) {
+                    let element
+                    for (let index = 0; index < data.length; index++) {
+                        element += data[index];
+                        console.log(element)
+
+                        return p.html(element)
+        
+                    }
+                })
+            }
+        });*/
     </script>
 </body>
+
 </html>
