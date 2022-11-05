@@ -33,15 +33,18 @@
 
 
     <script type="text/javascript">
-        let p = $("p")
-        let Url = "http://localhost/tests/Api/country.php"
+
+        let p = $("p");
+        let Url = "http://localhost/tests/Api/country.php";
+
+        console.log("-------"+Url);
 
         $.ajax({
             url: Url,
-            success: function(data, textStatus, XMLHttpRequest){
+            //type:,
+            success: function(data){
+                p.html(data);
 
-                console.log(data, textStatus, XMLHttpRequest.responseXML)
-                p.html(" - - " + data)
                 
             }
         })
