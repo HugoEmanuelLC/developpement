@@ -1,0 +1,27 @@
+/* HEADER */
+header{
+    border-bottom: var(--border-blue);
+    min-height: 3em;
+}
+header div{
+    width: 100%;
+}
+header .logo{
+    justify-content: flex-start;
+}
+header .links a{
+    padding: 5px 10px;
+    border-radius: 0 10px;
+    background-color: var(--BG-color-light-blue);
+}
+header .links a:hover{
+    color: var(--BG-color-Dark-Blue);
+    background-color: var(--BG-color-Light);
+    box-shadow: var(--shadow);
+}
+header .logo{
+    padding-left: 5%;
+}
+header .links{
+    justify-content: space-around;
+}

@@ -1,0 +1,159 @@
+
+
+<div class="presentationDePage">
+    <div class="divLeft">
+        <h2>Presentation de la page</h2>
+    </div>
+
+    <div class="divRight">
+        <h3>Div Right</h3>
+    </div>
+</div>
+
+<div class="filter_search">
+
+    <h1>Filtre de recherche :</h1>
+
+    <form action="" method="get">
+        <div class="boxSelect">
+            <div>
+                <h3>Metiers :</h3>
+                <select name="metiers" id="metiers">
+                    <option value="var-0" >elect</option>
+                    <option value="var-1" >infor</option>
+                    <option value="var-2" >canali</option>
+                </select>
+            </div>
+            
+            <div>
+                <h3>Regions :</h3>
+                <select name="regions" id="regions">
+                    <option value="var-0" >algarve</option>
+                    <option value="var-1" >alentejo</option>
+                    <option value="var-2" >norte</option>
+                </select>
+            </div>
+        </div>
+
+        <input class="submit" type="submit" value="Procurar">
+    </form>
+</div>
+
+<div class="contenu">
+    <div class="items">
+
+        <div class="item">
+            <div class="img item1"></div>
+            <div class="infos">
+                <span><h4>Metier: &nbsp;</h4><p>nom du metier</p></span>
+                <span><h4>nom: &nbsp;</h4><p>nom item</p></span>
+                <span><h4>ville: &nbsp;</h4><p>nom ville</p></span>
+            </div>
+            <a href="http://127.0.0.1:5500/c-link-template/page.html" class="lien">lien</a>
+        </div>
+        
+
+        <div class="item">
+            <div class="img item2"></div>
+            <div class="infos">
+                <span><h4>Metier: &nbsp;</h4><p>nom du metier</p></span>
+                <span><h4>nom: &nbsp;</h4><p>nom item</p></span>
+                <span><h4>ville: &nbsp;</h4><p>nom ville</p></span>
+            </div>
+            <a href="http://127.0.0.1:5500/c-link-template/page.html" class="lien">lien</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+    let sousTitle = title + "| HOME";
+    $("title").text(sousTitle);
+    
+
+    $(function () {
+        $("#hideShow").click(function () { //changement de coulor light ou dark
+            $("body, .page").toggleClass("bgColorDark")
+        })
+        //let file_component_slide_bloc = "views/components/home/slideBloc.html";
+        //$("#add_component_slide_bloc").prependTo(function () {
+        //    $("#add_component_slide_bloc").load(file_component_slide_bloc)
+        //})
+    })
+
+    $(".item1").css({
+        "background-image": "url('https://steamuserimages-a.akamaihd.net/ugc/779610114015990632/54E2C3ECCA0404A1D798608F20FB5F5CC1A2F4FC/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false')"
+    })
+    $(".item2").css({
+        "background-image": "url('https://wallpapercave.com/wp/wp1928401.jpg')"
+    })
+
+    let p = $("p");
+    let metiers = $("#metiers");
+    let regions = $("#regions");
+    let UrlCountry = "http://localhost/tests/Api/country.php";
+    let item = "";
+    
+
+    console.log("-------"+UrlCountry);
+
+    $.ajax({
+        url: UrlCountry,
+        dataType: "json",
+        success: function(data){
+
+            console.log("data " + data)
+            let val = 0;
+            data.forEach(element => {
+
+                item += '<option value="'+val+'" >'+element.name+'</option>';
+                val++
+
+            })
+            metiers.html(item);
+            console.log("item " + item)
+                
+        },
+        error: p.html("error")
+    });
+
+
+
+
+    regions.change(function(id){
+        regions.html(`Metier -> ${id.target.value}`);
+    
+        companies.map(function(company) {
+    
+            for (let index = 0; index < companies.length; index++) {
+                const element = companies[index];
+    
+                if (company.name === id.target.value) {
+    
+                    console.log("c'est l'element trouver" + company.name + company.start);
+    
+                    let itemCompany = '';
+    
+                    h1 = '<h1>'+company.name+'</h1>'; 
+                    p = '<p>'+company.start+'</p>';
+                    img = '<img src="'+company.imgBGD+'">';
+                    desc = '<h3>' +company.description+ '</h3>';
+    
+                    itemCompany += h1 + p + img + desc;
+    
+                    return $(".company").html(itemCompany);
+    
+                }else{}
+                
+            }
+        })
+    
+    })
+
+    
+</script>

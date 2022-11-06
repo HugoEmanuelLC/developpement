@@ -1,0 +1,46 @@
+/* CONTENU */
+.contenu .items{
+    flex-wrap: wrap;
+}
+.contenu .item{
+    border: solid 5px var(--BG-color-Dark-Blue);
+    box-shadow: inset var(--shadow-inset-bottom),
+            inset var(--shadow);
+    border-radius: 20px;
+    width: 400px;
+    margin: 20px;
+    padding: 8px;
+}
+.contenu .items .item p,
+.contenu .items .item h4,
+.contenu .items .item a
+{
+    color: var(--TXT-color-dark);
+}
+.contenu .item .img{
+    width: 100px;
+    height: 70px;
+    // background-color: aqua;
+    border-radius: 10px 0 0 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contenu .item .infos{
+    width: 100%;
+    padding-left: 5px;
+}
+.contenu .item .infos span{
+    justify-content: flex-start;
+}
+.contenu .items .item a{
+    align-self: flex-start;
+    background-color: var(--BG-color-Dark-Blue);
+    padding: 5px;
+    border-radius: 0 10px 0 0;
+    color: var(--BG-color-Light);
+    box-shadow: var(--shadow);
+}
+.contenu .items .item a:hover{
+    background-color: var(--BG-color-Dark-green);
+}

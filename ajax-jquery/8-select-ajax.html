@@ -41,34 +41,21 @@
 
         $.ajax({
             url: Url,
-            //type:,
+            dataType: "json",
             success: function(data){
-                p.html(data);
-
-                
-            }
-        })
-
-
-
-
-
-        /*$.ajax({
-            url: Url,
-            type: 'get',
-            success: function () {
-                $.map(function (data) {
-                    let element
-                    for (let index = 0; index < data.length; index++) {
-                        element += data[index];
-                        console.log(element)
-
-                        return p.html(element)
-        
-                    }
+                //p.html("hello"+data);
+                //console.log(data[1]["name"]);
+                let item = "";
+                data.forEach(element => {
+                    console.log(element.name)
+                    item += '<p>'+ element.name +'</p>';
                 })
-            }
-        });*/
+                p.html(item);
+                
+            },
+            error: p.html("error")
+        })
+        
     </script>
 </body>
 

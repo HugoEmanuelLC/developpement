@@ -1,0 +1,37 @@
+.filter_search{
+    background-color: var(--BG-color-Dark-green);
+    /* min-height: 400px; */
+    width: 80%;
+    padding: 20px;
+    border-radius: 30px;
+    margin: -50px auto 0;
+    box-shadow: var(--shadow);
+}
+.filter_search h1{
+    text-decoration: underline dashed;
+    text-underline-offset: 8px;
+    padding-bottom: 20px;
+}
+.filter_search form .boxSelect{
+    /* background-color: red; */
+    padding: 10px;
+    display: flex;
+        flex-wrap: wrap;
+}
+
+.filter_search form select{
+    padding: 2px 10px 2px;
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--TXT-color-dark);
+}
+.filter_search form select option{
+    color: var(--TXT-color-dark);
+}
+.filter_search form .submit{
+    margin: 10px;
+    background-color: var(--BG-color-Dark-Blue);
+    color: var(--TXT-color-Light);
+    padding: 2px 10px 2px;
+    border-radius: 5px;
+}
