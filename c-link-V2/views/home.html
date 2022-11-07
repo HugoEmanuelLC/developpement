@@ -17,20 +17,22 @@
     <form action="" method="get">
         <div class="boxSelect">
             <div>
-                <h3>Metiers :</h3>
-                <select name="metiers" id="metiers">
-                    <option value="var-0" >elect</option>
-                    <option value="var-1" >infor</option>
-                    <option value="var-2" >canali</option>
+                <h3>Jobs :</h3>
+                <select name="jobs" id="jobs">
                 </select>
             </div>
+
             
             <div>
                 <h3>Regions :</h3>
                 <select name="regions" id="regions">
-                    <option value="var-0" >algarve</option>
-                    <option value="var-1" >alentejo</option>
-                    <option value="var-2" >norte</option>
+                </select>
+            </div>
+            
+            
+            <div>
+                <h3>Citys :</h3>
+                <select name="citys" id="citys">
                 </select>
             </div>
         </div>
@@ -94,65 +96,82 @@
     })
 
     let p = $("p");
-    let metiers = $("#metiers");
-    let regions = $("#regions");
+    let citys = $("#citys");
+    let itemCountry = "";
     let UrlCountry = "http://localhost/tests/Api/country.php";
-    let item = "";
-    
 
-    console.log("-------"+UrlCountry);
 
+/*AFICHAGE des regions*/
+    let regions = $("#regions");
+    let itemRegion = "";
+    let UrlRegions = "http://localhost/tests/Api/regions.php";
     $.ajax({
-        url: UrlCountry,
+        url: UrlRegions,
         dataType: "json",
         success: function(data){
-
-            console.log("data " + data)
-            let val = 0;
-            data.forEach(element => {
-
-                item += '<option value="'+val+'" >'+element.name+'</option>';
-                val++
-
+            data.forEach(region => {
+                itemRegion += '<option value="'+region.id+'" >'+region.name+'</option>';
             })
-            metiers.html(item);
-            console.log("item " + item)
-                
+            regions.html(itemRegion);
         },
-        error: p.html("error")
+        error: p.html("error 1")
     });
 
 
 
+/*AFICHAGE des jobs*/
+    let jobs = $("#jobs");
+    let itemjobs = "";
+    let Urljobs = "http://localhost/tests/Api/jobs.php";
+    $.ajax({
+        url: Urljobs,
+        dataType: "json",
+        success: function(data){
+            data.forEach(job => {
+                itemjobs += '<option value="'+job.id+'" >'+job.name+'</option>';
+            })
+            jobs.html(itemjobs);
+        },
+        error: p.html("error 1")
+    });
 
+
+
+/*AFICHAGE des villes*/
     regions.change(function(id){
-        regions.html(`Metier -> ${id.target.value}`);
-    
-        companies.map(function(company) {
-    
-            for (let index = 0; index < companies.length; index++) {
-                const element = companies[index];
-    
-                if (company.name === id.target.value) {
-    
-                    console.log("c'est l'element trouver" + company.name + company.start);
-    
-                    let itemCompany = '';
-    
-                    h1 = '<h1>'+company.name+'</h1>'; 
-                    p = '<p>'+company.start+'</p>';
-                    img = '<img src="'+company.imgBGD+'">';
-                    desc = '<h3>' +company.description+ '</h3>';
-    
-                    itemCompany += h1 + p + img + desc;
-    
-                    return $(".company").html(itemCompany);
-    
-                }else{}
-                
-            }
-        })
-    
+        let itemCity = "";
+        let UrlCity = "http://localhost/tests/Api/city.php?idRegion="+`${id.target.value}`;
+        $.ajax({
+            url: UrlCity,
+            dataType: "json",
+            success: function(data){
+                data.forEach(city => {
+                    itemCity += '<option value="'+city.id+'" >'+city.name+'</option>';
+                })
+                citys.html(itemCity);
+                itemCity = "";
+            },
+            error: p.html("error 2")
+        });
+    })
+
+
+/*AFICHAGE des entreprises*/
+    citys.change(function(id){
+        let itemCity = "";
+        let UrlCity = "http://localhost/tests/Api/city.php?idRegion="+`${id.target.value}`;
+        $.ajax({
+            url: UrlCity,
+            dataType: "json",
+            success: function(data){
+                data.forEach(city => {
+                    itemCity += '<option value="'+city.id+'" >'+city.name+'</option>';
+                })
+                citys.html(itemCity);
+                itemCity = "";
+            },
+            error: p.html("error 2")
+        });
     })
 
     
