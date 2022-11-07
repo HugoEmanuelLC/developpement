@@ -1,0 +1,113 @@
+
+<style>
+.test{
+background-color: red;
+}
+</style>
+
+<div class="test" >
+
+    <h3>jobs :</h3>
+    <select name="job" id="job"></select>
+
+    <h3>Regions :</h3>
+    <select name="regions" id="regions"></select>
+    
+    <h3>Citys :</h3>
+    <select name="city" id="city"></select>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+/*SELECTOR*/
+let test = $(".test")
+let tagJob = $("#job");
+let tagRegion = $("#regions");
+let tagCity = $("#city");
+
+    
+/*IDs*/
+let IDjob = null;
+let IDregion = null;
+let IDcity = null;
+
+/*AFICHAGE des jobs*/
+
+let itemjobs = "";
+$.ajax({
+    url: "http://localhost/tests/Api/jobs.php",
+    dataType: "json",
+    success: function(data){
+
+        itemjobs += '<option>Jobs :</option>';
+        data.forEach(job => {
+            itemjobs += '<option value="'+job.id+'" >'+job.name+'</option>';
+        })
+        tagJob.html(itemjobs);
+    }
+});
+
+
+/*AFICHAGE des regions*/
+
+let itemRegion = "";
+$.ajax({
+    url: "http://localhost/tests/Api/regions.php",
+    dataType: "json",
+    success: function(data){
+
+        itemRegion += '<option>Region :</option>';
+        data.forEach(region => {
+            itemRegion += '<option value="'+region.id+'" >'+region.name+'</option>';
+        })
+        tagRegion.html(itemRegion);
+    }
+});
+
+
+/*AFICHAGE des citys*/
+let itemCity = "";
+test.change(function(){
+    $.ajax({
+        url: "http://localhost/tests/Api/city.php?idRegion="+IDregion,
+        dataType: "json",
+        success: function(data){
+    
+            itemCity += '<option>City :</option>';
+            data.forEach(city => {
+                itemCity += '<option value="'+city.id+'" >'+city.name+'</option>';
+            })
+            tagCity.html(itemCity);
+            itemCity = null;
+        }
+    });
+})
+
+
+tagJob.change(function(id){
+    IDjob = `${id.target.value}`;
+    console.log("job "+IDjob);
+});
+
+tagRegion.change(function(id){
+    IDregion = `${id.target.value}`;
+    console.log("job "+IDjob +" region " +IDregion);
+});
+
+tagCity.change(function(id){
+    IDcity = `${id.target.value}`;
+});
+
+
+
+
+
+    
+    
+
+
+    
+</script>
