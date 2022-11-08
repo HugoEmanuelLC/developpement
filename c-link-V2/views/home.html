@@ -15,29 +15,30 @@
     <h1>Filtre de recherche :</h1>
 
     <form>
-        <div class="boxSelect">
-            <div>
+        <div class="boxSelect ">
+            <div class="test">
                 <h3>Jobs :</h3>
-                <select name="jobs" id="jobs">
+                <select name="job" id="job">
                 </select>
             </div>
 
             
-            <div>
+            <div class="test">
                 <h3>Regions :</h3>
                 <select name="regions" id="regions">
                 </select>
             </div>
             
             
-            <div>
+            <div class="test">
                 <h3>Citys :</h3>
-                <select name="citys" id="citys">
+                <select name="city" id="city">
+                    <option>City :</option>
                 </select>
             </div>
         </div>
 
-        <input class="submit" type="submit" value="Procurar">
+        <!--<input class="submit" type="submit" value="Procurar">-->
     </form>
 </div>
 
@@ -95,96 +96,6 @@
         "background-image": "url('https://wallpapercave.com/wp/wp1928401.jpg')"
     })
 
-    let p = $("p");
-    let citys = $("#citys");
-    let job = $("#job");
-    let itemCity = "";
-    let itemCountry = "";
-
-
-/*AFICHAGE des regions*/
-    let regions = $("#regions");
-    let itemRegion = "";
-    $.ajax({
-        url: "http://localhost/tests/Api/regions.php",
-        dataType: "json",
-        success: function(data){
-
-            itemRegion += '<option>Region :</option>';
-            data.forEach(region => {
-                itemRegion += '<option value="'+region.id+'" >'+region.name+'</option>';
-            })
-            regions.html(itemRegion);
-        },
-        error: p.html("error 1")
-    });
-
-
-
-/*AFICHAGE des jobs*/
-    let jobs = $("#jobs");
-    let itemjobs = "";
-    $.ajax({
-        url: "http://localhost/tests/Api/jobs.php",
-        dataType: "json",
-        success: function(data){
-            itemjobs += '<option>Jobs :</option>';
-            data.forEach(job => {
-                itemjobs += '<option value="'+job.id+'" >'+job.name+'</option>';
-            })
-            jobs.html(itemjobs);
-            itemjobs = "";
-        },
-        error: p.html("error 1")
-    });
-
-
-
-/*AFICHAGE des villes*/
-    regions.change(function(idRegion){
-        let UrlCity = "http://localhost/tests/Api/city.php?idRegion="+`${idRegion.target.value}`;
-        $.ajax({
-            url: UrlCity,
-            dataType: "json",
-            success: function(data){
-                itemCity += '<option>city :</option>';
-                data.forEach(city => {
-                    itemCity += '<option value="'+city.id+'" >'+city.name+'</option>';
-                })
-                citys.html(itemCity);
-                itemCity = "";
-            },
-            error: p.html("error 2")
-        });
-    })
-
-
-/*AFICHAGE des entreprises*/
-    citys.change(function(idCity){
-        $(".submit").click(function(){
-            job.change(function(idJob){
-                let itemCompany = "";
-                let UrlCompany = "http://localhost/tests/Api/company.php?idCity="+`${idCity.target.value}`+"&idJob="+`${idJob.target.value}`;
-                console.log(UrlCompany);
-                $.ajax({
-                    url: UrlCompany,
-                    dataType: "json",
-                    success: function(data){
-                        
-                        data.forEach(company => {
-                            itemCompany += 'COMPANY '+company.name;
-                        })
-                        p.html(itemCompany);
-                    },
-                    error: p.html("error 2")
-                });
-            })
-        })
-    })
-
-    console.log(`${idRegion.target.value}`);
-    console.log(`${idCity.target.value}`);
-    console.log(`${idJob.target.value}`);
 
     
 </script>
