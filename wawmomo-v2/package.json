@@ -1,0 +1,12 @@
+{
+  "name": "c-link",
+  "version": "1.0.0",
+  "description": "projet , plateform pour intreprise",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sassC-Link": "sass --watch ./public/styles/main.scss:./public/styles/css/style.css --style compressed"
+  },
+  "author": "hugo clavinas",
+  "license": "ISC"
+}

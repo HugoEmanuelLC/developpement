@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color_deuxieme);
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    transition: 200ms;
+}
+
+a,
+li
+{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+body{
+    background-color: var(--color_premier);
+}
+#page,
+.menus
+{
+    min-height: 100vh;
+}
