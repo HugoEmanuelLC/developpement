@@ -10,12 +10,18 @@ if ($conn->connect_error) {
 }
 
 $json=array();
+$idPageCompany = 0;
+$idPageCompany = $_GET['idPageCompany'];
 
-$sql="SELECT * FROM country ORDER BY `name` DESC";
+$sql="SELECT * FROM `company` AS COM
+    INNER JOIN `contact` AS CONT
+    ON COM.idCompany = CONT.id_company 
+    INNER JOIN `job` AS j
+    ON COM.id_job = j.id
+    WHERE COM.idCompany = $idPageCompany ";
 $stmt=$conn->prepare($sql);
 $stmt->execute();
 $result=$stmt->get_result();
-
 while ($row = $result->fetch_assoc()) {
     array_push($json, $row);
 }

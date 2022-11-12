@@ -1,5 +1,5 @@
-$("#page").ready(function(){
-    /*SELECTOR*/
+
+/*SELECTOR*/
 let test = $(".test")
 let tagJob = $("#job");
 let tagRegion = $("#regions");
@@ -22,7 +22,7 @@ $.ajax({
 
         itemjobs += '<option>Jobs :</option>';
         data.forEach(job => {
-            itemjobs += '<option value="'+job.id+'" >'+job.name+'</option>';
+            itemjobs += '<option value="'+job.id+'" >'+job.name_job+'</option>';
         })
         tagJob.html(itemjobs);
     }
@@ -72,13 +72,13 @@ let itemCompany = "";
         success: function(data){
             data.forEach(company => {
                 itemCompany +='<div class="item">';
-                itemCompany +='<div class="img item1"></div>';
-                itemCompany +='<div class="infos">';
-                itemCompany += '<span><h4>Metier: &nbsp;</h4><p>'+company.name+'</p></span>';
-                itemCompany += '<span><h4>nom:: &nbsp;</h4><p>'+company.name+'</p></span>';
-                itemCompany += '<span><h4>ville: &nbsp;</h4><p>'+company.name+'</p></span>';
-                itemCompany +='</div>';
-                itemCompany +='<a href="http://127.0.0.1:5500/#/page1" class="lien">lien</a>';
+                itemCompany +=  '<div class="img item1" style="background: url('+company.img_background+')"></div>';
+                itemCompany +=  '<div class="infos">';
+                itemCompany +=      '<span><h4>Metier: &nbsp;</h4><p>'+company.name_job+'</p></span>';
+                itemCompany +=      '<span><h4>nom: &nbsp;</h4><p>'+company.name_company+'</p></span>';
+                itemCompany +=      '<span><h4>ville: &nbsp;</h4><p>'+company.adresse+'</p></span>';
+                itemCompany +=  '</div>';
+                itemCompany +=  '<a href="http://127.0.0.1:5500/?idPageCompany='+company.idCompany+'#/page1" class="lien">lien</a>';
                 itemCompany +='</div>';
             })
             tagCompany.html(itemCompany);
@@ -101,4 +101,3 @@ tagRegion.change(function(id){
 tagCity.change(function(id){
     IDcity = `${id.target.value}`;
 });
-})

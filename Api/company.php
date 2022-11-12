@@ -18,10 +18,17 @@ if ($conn->connect_error) {
 }
 
 $json=array();
-$idRegion = 0;
-$idRegion = $_GET['idRegion'];
+$idCity = 0;
+$idJob = 0;
+$idCity = $_GET['idCity'];
+$idJob = $_GET['idJob'];
 
-$sql="SELECT * FROM `city` WHERE `id_region` = $idRegion ORDER BY `name` ASC";
+$sql="SELECT * FROM `company` AS cmp 
+    INNER JOIN `job` AS jb
+    ON cmp.id_job = jb.id
+    INNER JOIN `contact` AS CONT
+    ON cmp.idCompany= CONT.id_company 
+    WHERE cmp.id_city = $idCity AND cmp.id_job = $idJob;";
 
 $stmt=$conn->prepare($sql);
 $stmt->execute();

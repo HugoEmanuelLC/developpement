@@ -1,17 +1,75 @@
+<div class="contener_page">
+    <div class="img_coverture">
+    </div>
 
+    
+    
+    <div class="nav">
+        <a href="">A propos</a>
+        <a href="">Images</a>
+        <!--<a href="">Contact</a>-->
+    </div>
+
+    <div class="nom_de_page"></div>
+
+    <div class="contenu">
+
+        <div class="AddContenu">
+            <p>ici les contenus comme "à propos" ou "images"</p>
+        </div>
+
+        <div class="infos">
+            <h2>Adresse :</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <h2>Phone :</h2>
+            <p>0123456987</p>
+            
+            <h2>Horaire :</h2>
+            <p>Lundi à vendredi de 00h00 à 00h00</p>
+            <p>Samedi et Dimanche</p>
+        </div>
+    </div>
+</div>
 
 
 <script type="text/javascript">
 
-    let sousTitle = title + "| PAGE 1";
+    sousTitle = title + "| PAGE 1";
     $("title").text(sousTitle);
 
 
-
+    $(".links").hide();
 
 
     
-    
+let idPageCompany = window.location.search;
+idPageCompany = idPageCompany.replace("?","")
+console.log(idPageCompany);  
+
+/*SELECTORS*/
+let img_coverture = $(".img_coverture");
+let name_page = $(".nom_de_page");
+let infos = $(".infos");
+
+
+$.ajax({
+    url: "http://localhost/tests/Api/page-company.php?"+idPageCompany,
+    dataType: "json",
+    success: function(data){
+        let itemINFOS = "";
+        data.forEach(company => {
+            name_page.html('<h1>'+company.name_company+" | "+company.name_job+'</h1>');
+            img_coverture.css({"background-image": "url('"+company.img_background+"')"});
+
+            itemINFOS += '<h2>Adresse :</h2>' + '<p>'+company.adresse+'</p>';
+            itemINFOS += '<h2>Phone :</h2>' + '<p>'+company.phone+'</p>';
+            itemINFOS += '<h2>Horaire :</h2>' + '<p> Lundi à vendredi de 00h00 à 00h00 </p>' + '<p>Samedi et Dimanche</p>';
+        })
+        infos.html(itemINFOS);
+        
+    }
+});
 
 
     

@@ -1,14 +1,6 @@
-<?php
+<?php 
 
-
-header("Access-Control-Allow-Origin: *");
-
-$host = "localhost"; 
-$login = 'root';    
-$pswr = '';   
-$dbname = "world";  
-
-
+include_once('configDB.php'); 
 
 
 $conn = new mysqli($host,$login,$pswr,$dbname);
@@ -18,11 +10,8 @@ if ($conn->connect_error) {
 }
 
 $json=array();
-$idRegion = 0;
-$idRegion = $_GET['idRegion'];
 
-$sql="SELECT * FROM `city` WHERE `id_region` = $idRegion ORDER BY `name` ASC";
-
+$sql="SELECT * FROM `regions` WHERE `id_country` = 1 ORDER BY `name` ASC";
 $stmt=$conn->prepare($sql);
 $stmt->execute();
 $result=$stmt->get_result();
@@ -32,4 +21,3 @@ while ($row = $result->fetch_assoc()) {
 }
 
 echo json_encode($json);
-
