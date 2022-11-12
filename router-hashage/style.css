@@ -1,0 +1,15 @@
+*{
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+    color:#cacaca;
+}
+body,html{
+    margin: 0 0;
+    background-image: linear-gradient( #151515 , #4d0000);
+    background-repeat: repeat-x;
+    height: 100vh;
+}
+div{
+    background-color: chocolate;
+}
