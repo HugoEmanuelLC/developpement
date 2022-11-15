@@ -1,0 +1,59 @@
+
+<div class="box_contenue_cub">
+    <div class="sous_box_contenue_cub">
+        <div class="cub">
+            <div class="top">
+                <a class="spanA a-contact" >Contact</a>
+            </div>
+            <div>
+                <span style="--i:0;">
+                    <a class="spanA" href="http://" >lien</a>
+                </span>
+                <span style="--i:1;">
+                    <a class="spanA" href="http://" >lien</a>
+                </span>
+                <span style="--i:2;">
+                    <a class="spanA" href="http://" >lien</a>
+                </span>
+                <span style="--i:3;">
+                    <a class="spanA" href="http://" >lien</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact">
+    <span><i class="fa-solid fa-circle-xmark"></i></span>
+    <ul>
+        <div>
+            <li>
+                <h3>Nom:&nbsp;</h3>
+                <p>Hugo Clavinas</p>
+            </li>
+            <li>
+                <h3>Mail:&nbsp;</h3>
+                <p>hugoclavinas@gmail.com</p>
+            </li>
+            <li>
+                <h3>Adresse:&nbsp;</h3>
+                <p>Braine L'alleud</p>
+            </li>
+        </div>
+    </ul>
+</div>
+
+<script>
+    
+    msg = title +"| HOME"
+    $("title").text(msg)
+
+    $(".contact").addClass("hide")
+    $(".a-contact").click(function(){
+        $(".contact").addClass("show")
+    })
+    $(".contact span").click(function(){
+        $(".contact").addClass("hide").removeClass("show")
+    })
+
+</script>
