@@ -1,0 +1,25 @@
+nav{
+    background-color: var(--colorBgHeader);
+    // color: var(--colorClair);
+    position: sticky;
+        top: 0;
+    z-index: 10;
+    color: white;
+}
+nav, 
+nav .links{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+nav .links a:hover{
+    // background-color: var(--colorClair);
+    color: var(--backColorGreen);
+}
+nav .links{
+    font-size: var(--fontSize);
+}
+nav a{
+    color: white;
+    padding: 3px 5px;
+}

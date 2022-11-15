@@ -1,0 +1,12 @@
+{
+  "name": "mon-portfolio-final",
+  "version": "1.0.0",
+  "description": "Projet Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sassMon-Portfolio": "sass --watch ./public/styles/main.scss:./public/styles/css/style.css --style compressed"
+  },
+  "author": "Hugo Clavinas",
+  "license": "ISC"
+}
