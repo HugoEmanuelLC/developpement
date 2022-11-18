@@ -1,0 +1,84 @@
+
+
+
+<header>
+    <div class="box">
+        <div class="box_titre">
+            <h1>Hugo</h1>
+            <h2>Clavinas</h2>
+            <h3>Developpeur </h3>
+            <h4>Web Apps</h4>
+        </div>
+        <div class="box_links">
+            <a class="a-apropos">A Propos</a>
+            <a href="/Portfolio">Portfolio</a>
+            <a href="#demos">Demos</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+
+<div class="apropos slide_box hide">
+    <span><i class="fa-solid fa-circle-xmark"></i></span>
+    <h1>A Propos :</h1>
+    <p>... Bientôt</p>
+</div>
+
+<section>
+    
+</section>
+
+<section>
+    <h1 id="demos" class="titres">Demos : <a href="./"><i class="fa-solid fa-chevron-up"></i></a></h1>
+    <div class="box_contenu">
+        <div id="disney" class="article">
+            <a href="demos/Disney">Disney + ...Bientôt</a>
+        </div>
+
+        <div class="article">
+            <a href="">...Bientôt</a>
+        </div>
+    </div>
+
+    
+    <h1 id="projets" class="titres">Projets : <a href="./"><i class="fa-solid fa-chevron-up"></i></a></h1>
+    <div class="box_contenu">
+        <div id="wawmomo" class="article">
+            <a href="https://www.wawmomo.be/" target="_blank">Restaurant </a>
+        </div>
+
+        <div class="article">
+            <a href="">...Bientôt</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        let wawmomo = $("#wawmomo");
+        
+        let a_apropos = $(".a-apropos");
+        let apropos = $(".apropos");
+        let apropos_span = $(".apropos span");
+
+        wawmomo.css({
+            "background-image": "url('./public/images/projets/img_wawmomo.png')"
+        })
+
+
+        
+
+        a_apropos.click(function(){
+            apropos.addClass("show").removeClass("hide")
+        });
+        apropos_span.click(function(){
+            apropos.addClass("hide").removeClass("show")
+        });
+    })
+</script>

@@ -1,0 +1,12 @@
+{
+  "name": "hugo-clavinas",
+  "version": "1.0.0",
+  "description": "Site Web hugoclavinas.online",
+  "main": "routes/AddComponents.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sassHC": "sass --watch ./public/styles/main.scss:./public/styles/css/style.css --style compressed"
+  },
+  "author": "Hugo L Clavinas",
+  "license": "ISC"
+}
