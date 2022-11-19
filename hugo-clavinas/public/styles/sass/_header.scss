@@ -1,9 +1,18 @@
 header{
-    // position: relative;
+    position: relative;
     height: 100vh;
     display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+}
+header .logo{
+    position: absolute;
+        bottom: 2px;
+        right: 2px;
+    width: 100px;
+    border-radius: 50%;
+    opacity: 0.5;
+    box-shadow: var(--text_shadow);
 }
 header .box{
     width: 100%;
@@ -51,6 +60,11 @@ header .box_links a:hover{
     color: black;
 }
 @media screen AND (max-width: 800px) {
+    header .logo{
+            top: 2px;
+            right: 2px;
+        width: 80px;
+    }
     header .box{
         display: flex;
             justify-content: space-between;
