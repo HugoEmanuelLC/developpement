@@ -1,0 +1,22 @@
+header{
+    padding: 100px 0;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    position: sticky;
+        top: 0;
+    color: var(--colorBG_04);
+    line-height: 1.2;
+}
+header div{
+    border-left: solid 15px red;
+    padding-left: 15px;
+}
+header h1{
+    font-size: 2.6rem;
+}
+
+// header h1 , p{
+//     background-color: greenyellow;
+// }
