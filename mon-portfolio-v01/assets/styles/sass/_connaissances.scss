@@ -53,3 +53,10 @@
     font-size: 2rem;
     width: 300px;
 }
+
+@media (max-width: 800px) {
+    .connaissances .item{
+        width: 100px;
+        height: 100px;
+    }
+}

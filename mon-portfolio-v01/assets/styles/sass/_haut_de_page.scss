@@ -28,11 +28,11 @@
         font-size: 5rem;
     }
     h2{
-        font-size: 4rem;
-    }
-    h3{
         font-size: 3rem;
     }
+    // h3{
+    //     font-size: 3rem;
+    // }
 }
 
 .intitule .text{
@@ -44,6 +44,7 @@
     position: absolute;
         top: 20%;
         left: 20%;
+    text-align: center;
 
     li{
         line-height: 1;
@@ -80,15 +81,24 @@
 
 @media (max-width: 800px) {
     .intitule{
+        .text ul{
+            // border: solid 3px green;
+            left: 5%;
+            right: 5%;
+        }
+        li:last-child{
+            width: 50%;
+            margin: 0 auto;
+        }
         h1{
             font-size: 4rem;
         }
         h2{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
-        h3{
-            font-size: 2rem;
-        }
+        // h3{
+        //     font-size: 2rem;
+        // }
     }
     .intitule .photoProfil{
         height: 300px;
@@ -110,8 +120,3 @@
 }
 
 
-@media (max-width: 600px) {
-    .intitule .text ul{
-        left: 10%;
-    }
-}
