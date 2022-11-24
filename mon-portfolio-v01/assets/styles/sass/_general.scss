@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    transition: 300ms;
+    transition: 250ms;
     font-size: 16px;
 }
 
@@ -23,6 +23,7 @@ li{
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 #page{
@@ -65,6 +66,7 @@ a{
     color: green;
 }
 
+//un filtre noir sur une image pour un beau contraste
 .dark_opo{
     background-color: rgb(0, 0, 0, 0.5);
 }

@@ -1,27 +1,30 @@
-// .page .navbar{
-//     background-color: red;
-// }
-// .navbar ul{
-//     display: flex;
-// }
+.box_links{
+    margin-top: 50px;
+    // padding: 10px;
+}
+.box_links a{
+    font-size: 1.3em;
+    border: solid 1px white;
+    color: white;
+    padding: 4px 6px;
+    margin: 10px;
+}
+.box_links a:hover{
+    background-color: white;
+    color: black;
+}
 
-// .navbar ul li{
-//     display: flex;
-//     width: 100%;
-// }
-// .navbar ul li a{
-//     height: 100%;
-//     width: 100%;
-//     padding: 5px 10px;
-//     color: white;
-// }
-// .navbar ul li a:hover{
-//     background-color: #173f5f;
-// }
-// .navbar .active{
-//     background-color: black;
-//     color: white;
-// }
-// .navbar .linkLogout{
-//     text-align: center;
-// }
+@media screen AND (min-width: 801px) {
+    .box_links a{
+        width: 50%;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+}
+
+@media screen AND (max-width: 800px) {
+    .box_links a{
+        margin: 10px auto;
+        max-width: 400px;
+    }
+}

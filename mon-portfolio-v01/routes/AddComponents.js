@@ -8,9 +8,10 @@ var routes = [
 
     {path: "#/", name: "home", component: "home.html"},
     {path: "#/home", name: "home", component: "home.html"},
-    // {path: "#projets", name: "#projets", component: "home.html"}, // mode target
-    // {path: "#demos", name: "#demos", component: "home.html"},
-    // {path: "#contact", name: "#contact", component: "home.html"},
+    {path: "#projets", name: "#projets", component: "home.html"}, // mode target
+    {path: "#technologie", name: "#technologie", component: "home.html"},
+    {path: "#demos", name: "#demos", component: "home.html"},
+    {path: "#contact", name: "#contact", component: "home.html"},
 
     {path: "#/pagetest", name: "page", component: "pageTest.html"},
 ];
