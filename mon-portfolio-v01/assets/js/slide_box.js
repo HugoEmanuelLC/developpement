@@ -7,7 +7,7 @@ $(function(){
 
 
     
-
+    
     a_in_slide_box.click(function(){
         slide_box.addClass("show").removeClass("hide")
     });

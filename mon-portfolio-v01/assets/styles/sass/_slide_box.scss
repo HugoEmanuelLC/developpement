@@ -9,12 +9,10 @@
 }
 
 
-.a_in_slide_box i,
-.a_out_slide_box i{
+.btn_slide_box i{
     font-size: 1.3rem;
 }
-.a_in_slide_box,
-.a_out_slide_box{
+.btn_slide_box{
     padding: 10px 12px;
     display: inline;
     color: var(--colorBG_04);
@@ -23,8 +21,7 @@
         left: 10px;
     z-index: 5;
 }
-.a_in_slide_box:hover,
-.a_out_slide_box:hover{
+.btn_slide_box:hover{
     color: white;
 }
 

@@ -4,16 +4,18 @@ let AddComponents = $("#AddComponents");
 title = "C-Link ";
 
 var routes = [
+    // changement de page
     {path: "#/notfound", name: "notfound", component: "errorPage.html"},
-
     {path: "#/", name: "home", component: "home.html"},
     {path: "#/home", name: "home", component: "home.html"},
-    {path: "#projets", name: "#projets", component: "home.html"}, // mode target
+    {path: "#/pagetest", name: "page", component: "pageTest.html"},
+
+    // mode target
+    {path: "#apropos", name: "#apropos", component: "home.html"}, 
+    {path: "#projets", name: "#projets", component: "home.html"}, 
     {path: "#technologie", name: "#technologie", component: "home.html"},
     {path: "#demos", name: "#demos", component: "home.html"},
     {path: "#contact", name: "#contact", component: "home.html"},
-
-    {path: "#/pagetest", name: "page", component: "pageTest.html"},
 ];
 
 var HashChange = function(){
