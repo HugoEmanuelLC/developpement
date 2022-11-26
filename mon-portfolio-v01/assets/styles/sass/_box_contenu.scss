@@ -1,22 +1,27 @@
 
 .box_contenu{
+    // border: solid red 5px;
     background-color: var(--backColorOrange);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.contenu_demos{
     min-height: 80vh;
-    // padding-bottom: 5px;
     display: flex;
         flex-wrap: wrap;
-        // justify-content: flex-start;
-        align-items: flex-start;
+        // justify-content: center;
+        // align-items: center;
 }
+
+
 .box_contenu .article{
     background-color: var(--colorBG_01);
     width: 400px;
-    height: 400px;
-    margin: 10px;
+    height: 300px;
+    margin: 25px;
     background-position: top left;
     background-size: cover;
     display: flex;
@@ -42,8 +47,10 @@
 
 
 
-@media screen AND (max-width: 800px) {
+@media screen AND (max-width: 904px) {
     .box_contenu .article{
-        width: 100%;
+        width: 85%;
+        height: 300px;
+        margin: 25px auto;
     }
 }
