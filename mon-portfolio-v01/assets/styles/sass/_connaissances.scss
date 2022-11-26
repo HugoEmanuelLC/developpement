@@ -31,9 +31,16 @@
         justify-content: center;
         align-items: center;
 }
-.connaissances .item img{
-    max-width: 100%;
-    max-height: 100%;
+// .connaissances .item img{
+//     max-width: 100%;
+//     max-height: 100%;
+// }
+
+.img_mvc{
+    margin-top: 100px;
+    opacity: 0.6;
+    width: 90%;
+    box-shadow: var(--shadowObjet);
 }
 
 .link_pdf{
