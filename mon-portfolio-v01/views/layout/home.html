@@ -60,7 +60,7 @@
 
 
 <!-- TECHNOLOGIES , CONNAISSANCES -->
-    <h1 class="titre_Portfolio">Technologie :</h1>
+    <h1 class="titre_Portfolio">Technologie : <a href="./"><i class="fa-solid fa-chevron-up"></i></a></h1>
     <div id="technologie" class="connaissances">
 
         <div class="items_bloc">
@@ -125,7 +125,7 @@
 
         <div class="dark_opo">
             <div class="contenu_demos">
-                <div id="wawmomo" class="article" style="background-image: url('./assets/images/img_wawmomo.png');">
+                <div id="wawmomo" class="article">
                     <a href="https://www.wawmomo.be/" target="_blank">Sandwicherie</a>
                 </div>
         
@@ -145,10 +145,14 @@
 <script type="text/javascript">
     $(function () {
         let BG_haut_de_page = $(".haut_de_page");
+        let BG_projet_wawmomo = $("#wawmomo");
 
 
         BG_haut_de_page.css({
             "background-image": "url('./assets/images/bg_blue.jpg')"
+        });
+        BG_projet_wawmomo.css({
+            "background-image": "url('./assets/images/photo_wawmomo.png')"
         });
     })
 </script>

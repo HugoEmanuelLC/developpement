@@ -5,13 +5,9 @@
     width: 100%;
     position: fixed;
         top: 0;
-        z-index: 10;
 }
 
 
-.btn_slide_box i{
-    font-size: 1.3rem;
-}
 .btn_slide_box{
     padding: 10px 12px;
     display: inline;
@@ -19,12 +15,13 @@
     position: sticky;
         top: 10px;
         left: 10px;
-    z-index: 5;
 }
 .btn_slide_box:hover{
     color: white;
 }
-
+.btn_slide_box i{
+    font-size: 1.3rem;
+}
 
 
 .hide{
