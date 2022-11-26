@@ -1,37 +1,40 @@
-$(function(){
     
     let list_menus = $(".box_list_menus"); 
+    let list_produits = $(".box_list_produits"); 
+    // let a_test_out = $(".a_test_out");
 
 /*AFICHAGE des Menus*/
-let item_menu = "";
+let menus = "";
 $.ajax({
     url: "http://localhost/tests/Api/api-wawmomo/menus.php",
     dataType: "json",
     success: function(data){
         
-        data.forEach(menu => {
-            item_menu += '<div '+menu.ID+' class="item">';
-            item_menu +=    '<div class="dark_opo">';
-            item_menu +=        '<h1>'+menu.NAME+'</h1>';
-            item_menu += '</div></div>';
+        data.forEach(dataMenus => {
+            menus += '<div class="item" style="background-image: url(./assets/images/menus/'+dataMenus.URL_IMG+');">';
+            menus +=    '<div onclick="idvalue('+dataMenus.ID+')" class="dark_opo">';
+            menus +=        '<h1>'+dataMenus.NAME+'</h1>';
+            menus += '</div></div>';
         })
-        list_menus.html(item_menu);
+        list_menus.html(menus);
     }
 });
 
 
 /*AFICHAGE des produits*/
-let item = "";
-$.ajax({
-    url: "http://localhost/tests/Api/api-wawmomo/produits.php?i=",
-    dataType: "json",
-    success: function(data){
-        
-        data.forEach(menu => {
-            item += '<div '+menu.ID+' class="item"><div class="dark_opo"><h1>'+menu.NAME+'</h1></div></div>';
-        })
-        list_produits.html(item);
-    }
-});
+function idvalue(id){
+    let produit = "";
+    $.ajax({
+        url: "http://localhost/tests/Api/api-wawmomo/produits.php?i="+id,
+        dataType: "json",
+        success: function(data){
+            // produit += '<a class="a_test_out">test</a>';
+            data.forEach(dataProduits => {
+                produit += '<h1>'+dataProduits.nom+'</h1>';
+            })
+            list_produits.html(produit);
+        }
+    });
+}
 
-})
+

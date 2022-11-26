@@ -7,24 +7,26 @@
     // background-size: cover;
     // background-attachment: fixed;
     display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
 }
 .box_list_menus div{
     // border: solid green 3px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
+    // border-radius: 20px;
+    // margin: 5px;
     background-position: top left;
     background-size: cover;
     display: flex;
         justify-content: center;
         align-items: center;
+}
+.box_list_menus .dark_opo{
+    padding: 5px 10px;
+    height: 100px;
+    min-width: 150px;
 }
 .box_list_menus .item:hover div{
     background-color: rgb(0, 0, 0, 0.9);

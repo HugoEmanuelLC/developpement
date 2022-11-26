@@ -71,9 +71,9 @@ h1{
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: black; 
+    background: var(--bckgd_color_light_2); 
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--bckgd_color_light_2);
+    background-color: white;
 }
