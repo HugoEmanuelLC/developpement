@@ -11,11 +11,12 @@ var routes = [
     {path: "#/pagetest", name: "page", component: "pageTest.html"},
 
     // mode target
-    {path: "#apropos", name: "#apropos", component: "home.html"}, 
-    {path: "#projets", name: "#projets", component: "home.html"}, 
-    {path: "#technologie", name: "#technologie", component: "home.html"},
-    {path: "#demos", name: "#demos", component: "home.html"},
-    {path: "#contact", name: "#contact", component: "home.html"},
+    // {path: "#top", name: "#top", component: "home.html"}, 
+    // {path: "#apropos", name: "#apropos", component: "home.html"}, 
+    // {path: "#projets", name: "#projets", component: "home.html"}, 
+    // {path: "#technologie", name: "#technologie", component: "home.html"},
+    // {path: "#demos", name: "#demos", component: "home.html"},
+    // {path: "#contact", name: "#contact", component: "home.html"},
 ];
 
 var HashChange = function(){

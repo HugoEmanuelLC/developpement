@@ -40,7 +40,7 @@
 
 
 <!-- A PROPOS DE MOI -->
-            <div id="apropos" class="intro" style="background-image: url('');">
+            <div id="apropos" class="intro" style="background-image: url('');" data-aos="zoom-in">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum excepturi odio perferendis ratione
                     delectus repudiandae aliquam, necessitatibus voluptatum! Dolorum, vero mollitia! Excepturi soluta
                     corrupti nam vitae beatae, veniam ipsa perspiciatis.</p>
@@ -60,10 +60,10 @@
 
 
 <!-- TECHNOLOGIES , CONNAISSANCES -->
-    <h1 class="titre_Portfolio">Technologie : <a href="./"><i class="fa-solid fa-chevron-up"></i></a></h1>
-    <div id="technologie" class="connaissances">
+    <h1 id="technologie" class="titre_Portfolio">Technologie : <a class="a_scroll_up"><i class="fa-solid fa-chevron-up"></i></a></h1>
+    <div class="connaissances">
 
-        <div class="items_bloc">
+        <div class="items_bloc" data-aos="fade-right">
             
             <div class="item">
                 <img src="./assets/images/technos/html5.png" alt="">
@@ -94,17 +94,18 @@
             </div>
         </div>
 
-        <img class="img_mvc" src="./assets/images/technos/mvc.png" alt="">
+        <img class="img_mvc" src="./assets/images/technos/mvc.png" alt="architechture mvc" data-aos="fade-right">
     </div>
 
 
 
 <!-- DEMOS -->
-    <h1 class="titre_Portfolio">Démos : <a href="./"><i class="fa-solid fa-chevron-up"></i></a></h1>
-    <div id="demos" class="box_contenu" style="background-image: url('./assets/images/abstract-black-green.jpg');">
+    <h1 id="demos" class="titre_Portfolio">Démos : <a class="a_scroll_up"><i class="fa-solid fa-chevron-up"></i></a></h1>
+    <div class="box_contenu" style="background-image: url('./assets/images/abstract-black-green.jpg');">
 
         <div class="dark_opo">
             <div class="contenu_demos">
+                <!-- DEMO APP DISNEY + -->
                 <div id="disney" class="article">
                     <a href="demos/Disney">Disney + ...Bientôt</a>
                 </div>
@@ -120,11 +121,12 @@
 
 
 <!-- PROJETS -->
-    <h1 class="titre_Portfolio">Projets : <a href="./"><i class="fa-solid fa-chevron-up"></i></a></h1>
-    <div id="projets" class="box_contenu" style="background-image: url('./assets/images/abstract-black-green.jpg');">
+    <h1 id="projets" class="titre_Portfolio">Projets : <a class="a_scroll_up"><i class="fa-solid fa-chevron-up"></i></a></h1>
+    <div class="box_contenu" style="background-image: url('./assets/images/abstract-black-green.jpg');">
 
         <div class="dark_opo">
             <div class="contenu_demos">
+                <!-- SANDWICHERIE -->
                 <div id="wawmomo" class="article">
                     <a href="https://www.wawmomo.be/" target="_blank">Sandwicherie</a>
                 </div>
@@ -142,7 +144,17 @@
 </div>
 
 
+
+
+<script type="text/javascript" src="./assets/js/scrolls_animation.js"></script>
 <script type="text/javascript">
+    // BIBLIOTHEQUE AOS ANIMATION SCROLL
+    AOS.init({
+        duration: 600,
+        delay: 100,
+    });
+
+    // BIBLIOTHEQUE JQUERY
     $(function () {
         let BG_haut_de_page = $(".haut_de_page");
         let BG_projet_wawmomo = $("#wawmomo");
@@ -154,5 +166,6 @@
         BG_projet_wawmomo.css({
             "background-image": "url('./assets/images/photo_wawmomo.png')"
         });
+        
     })
 </script>

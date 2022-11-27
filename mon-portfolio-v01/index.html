@@ -7,6 +7,10 @@
     <meta name="description" content="Modele de base pour un developpement plus rapide">
     <meta name="author" content="Hugo L Clavinas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--BIBLIOTHEQUE AOS ANIMATION SCROLL-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <link rel="icon" type="image/png" href="assets/images/icons/logo-hc.png" />
     <link rel="stylesheet" href="assets/styles/css/style.css">
     <title>Portfolio | Hugo L Clavinas</title>
@@ -15,7 +19,7 @@
 
 
 
-<body>
+<body id="top">
     <div id="page">
 
         <a class=" btn_slide_box a_in_slide_box"><i class="fa-regular fa-indent"></i></a>
@@ -24,11 +28,11 @@
         <div class="slide_box hide">
             <a class=" btn_slide_box a_out_slide_box"><i class="fa-regular fa-outdent"></i></a>
             <div class="box_links">
-                <a class="a_out_slide_box" href="#apropos">A Propos</a>
-                <a class="a_out_slide_box" href="#technologie">Technologie</a>
-                <a class="a_out_slide_box" href="#demos">Demos</a>
-                <a class="a_out_slide_box" href="#projets">Projets</a>
-                <!--<a class="a_out_slide_box" href="#contact">Contact</a>-->
+                <a class="a_out_slide_box a_apropos">A Propos</a>
+                <a class="a_out_slide_box a_technologie">Technologie</a>
+                <a class="a_out_slide_box a_demos">Demos</a>
+                <a class="a_out_slide_box a_projets" >Projets</a>
+                <a class="a_out_slide_box a_scroll_up">Contact</a>
             </div>
         </div>
 
@@ -38,8 +42,11 @@
 
         <footer>
             <ul>
+                <!-- MAIL -->
                 <li><a href="mailto:helc85.info@gmail.com" target="_blank"><i class="fa-duotone fa-envelopes-bulk"></i></a></li>
+                <!-- LINKEDIN -->
                 <li><a href="https://www.linkedin.com/in/hugo-lopes-clavinas-795aaa97/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <!-- INDEED -->
                 <li><a href="https://my.indeed.com/resume?hl=fr&co=BE&from=gnav-menu-homepage&_ga=2.237077186.350364294.1651407770-815407004.1649620839" target="_blank"><img src="./assets/images/icon_indeeed.png" alt="" height="20px"></a></li>
             </ul>
         
@@ -50,8 +57,13 @@
     </div>
 
 
-
+    
+    <!-- BIBLIOTHEQUE JQUERY -->
     <script type="text/javascript" src="./src/jquery/jquery.min.js"></script>
+
+    <!--BIBLIOTHEQUE AOS ANIMATION SCROLL-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script type="text/javascript" src="./routes/AddComponents.js"></script>
     <script type="text/javascript" src="./assets/js/slide_box.js"></script>
 </body>
