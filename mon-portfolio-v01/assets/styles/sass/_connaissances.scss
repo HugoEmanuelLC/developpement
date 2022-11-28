@@ -9,25 +9,26 @@
     background-color: var(--colorBG_04);
 }
 .connaissances h1{
-    margin: 20px 0;
+    margin: 0 0 20px;
+    font-size: 2.5rem;
 }
-
 .connaissances .items_bloc{
-    // border: solid 2px red;
+    // background-color: gold;
+    margin-bottom: 150px;
     width: 100%;
     display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+    // overflow: hidden;
 }
 .connaissances .item{
-    // border: solid 2px yellow;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+    // background-color: aqua;
+    box-sizing: border-box;
+    min-width: 200px;
+    margin-bottom: 50px;
     display: flex;
+    flex-direction: column;
         justify-content: center;
         align-items: center;
 }
@@ -35,35 +36,69 @@
 //     max-width: 100%;
 //     max-height: 100%;
 // }
+// .connaissances .item h1{
+//     font-size: 2.3rem;
+//     text-align: right;
+// }
+.connaissances .item h2{
+    font-size: 1.9rem;
+    text-align: right;
+    width: 100%;
+    padding: 5px 5px 30px;
+}
+.connaissances .item h3{
+    position: relative;
+    font-size: 1.5rem;
+    border-bottom: solid 5px green;
+    padding: 4px 8px;
+    margin-bottom: 20px;
+    width: 150px;
+    text-align: left;
+}
+.connaissances .item h3::before{
+    content: "";
+    position: absolute;
+        bottom: -10px;
+        right: -10px;
+    background-color: red;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 50%;
+}
+.connaissances .items_names{
+    border-right: solid black 5px;
+}
 
 .img_mvc{
-    margin-top: 100px;
     opacity: 0.6;
     width: 90%;
+    max-width: 800px;
     box-shadow: var(--shadowObjet);
 }
 
-.link_pdf{
-    align-self: flex-start;
-    border-radius: 10px;
-    background-color: rgb(0, 132, 64);
-    box-shadow: var(--colorShadow);
-    padding: 4px 8px;
-    width: 200px;
-    margin: 0 0 100px 10%;
-    color: white;
-    font-size: 1.5rem;
-}
-.link_pdf:hover{
-    margin: 0 0 90px 10%;
-    padding: 6px 10px;
-    font-size: 2rem;
-    width: 300px;
-}
+
+
+// .link_pdf{
+//     align-self: flex-start;
+//     border-radius: 10px;
+//     background-color: rgb(0, 132, 64);
+//     box-shadow: var(--colorShadow);
+//     padding: 4px 8px;
+//     width: 200px;
+//     margin: 0 0 100px 10%;
+//     color: white;
+//     font-size: 1.5rem;
+// }
+// .link_pdf:hover{
+//     margin: 0 0 90px 10%;
+//     padding: 6px 10px;
+//     font-size: 2rem;
+//     width: 300px;
+// }
 
 @media (max-width: 800px) {
-    .connaissances .item{
-        width: 100px;
-        height: 100px;
-    }
+    // .connaissances .item{
+    //     width: 100px;
+    //     height: 100px;
+    // }
 }

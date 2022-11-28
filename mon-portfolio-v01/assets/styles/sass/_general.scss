@@ -39,6 +39,8 @@ body{
     position: relative;
 }
 
+
+// titres sticky
 .titre_Portfolio{
     position: sticky;
         top: 0;
@@ -50,7 +52,6 @@ body{
     color: white;
     font-size: 3rem;
 }
-
 .titre_Portfolio a{
     cursor: pointer;
     position: absolute;
@@ -79,6 +80,7 @@ body{
     // width: 100%;
 }
 
+// errorPage
 .notFound{
     color: red;
     height: 60vh;
