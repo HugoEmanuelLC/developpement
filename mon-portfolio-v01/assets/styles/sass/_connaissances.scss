@@ -9,7 +9,7 @@
     background-color: var(--colorBG_04);
 }
 .connaissances h1{
-    margin: 0 0 20px;
+    margin: 0 0 50px;
     font-size: 2.5rem;
     text-decoration: underline;
 }
@@ -45,7 +45,8 @@
     font-size: 1.9rem;
     text-align: right;
     width: 100%;
-    padding: 5px 5px 30px;
+    padding: 5px 5px 0;
+    border-bottom: solid 3px black;
 }
 .connaissances .item h3{
     position: relative;
@@ -68,6 +69,7 @@
 }
 .connaissances .items_names{
     border-right: solid black 5px;
+    padding-top: 50px;
 }
 
 .img_mvc{
