@@ -63,11 +63,11 @@ body{
 }
 .titre_Portfolio a i{
     font-size: 0.25em;
-    color: white;
+    color: var(--backColorOrange);
 }
 .titre_Portfolio a:hover > i{
     font-size: 0.2em;
-    color: green;
+    color: white;
 }
 
 //un filtre noir sur une image pour un beau contraste
