@@ -1,4 +1,4 @@
-
+// LIST DE MENUS
 .box_list_menus{
     // border: solid red 3px;
     // background-color: var(--);
@@ -36,4 +36,22 @@
     text-shadow: var(--shadowText);
     color: var(--text_color_light_3);
     text-align: center;
+}
+
+
+
+// LIST DE PRODUITS
+.box_list_produits{
+    margin: 10px;
+    padding: 10px;
+    // border: solid red 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    // text-shadow: var(--shadowText);
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 }

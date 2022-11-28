@@ -32,7 +32,9 @@
     </div>
 </div>
 
-<div class="box_list_produits "></div>
+<div class="box_list_produits ">
+    <h1>choisissez votre menu</h1>
+</div>
 
 
 <script type="text/javascript" src="./assets/js/datas_menus.js"></script>
@@ -40,10 +42,14 @@
     $(function(){
 
         let img_bg_menu = $(".box_list_menus .item");
+        let box_list_produits = $(".box_list_produits");
 
 
         img_bg_menu.css({
             "background-image": "url('https://www.voyagethailande.fr/cdn/th-public/panang_curry-MAX-w1000h600.jpg')"
+        });
+        box_list_produits.css({
+            "background-image": "url('./assets/images/background/bg-tan-antique-vintage-paper.jpg')"
         });
 
     })
