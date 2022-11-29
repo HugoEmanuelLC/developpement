@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les bases d un jeux</title>
+    <style>
+        body{
+            background-color: #252525;
+            color: white;
+        }
+        canvas{
+            background-color: aqua;
+            border: red solid 4px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <canvas width="400" height="400"></canvas>
+
+
+    <script>
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+
+        
+
+        // dessinner un carre
+        //function draw(){
+        //    ctx.fillStyle = "#BADA55";
+        //    ctx.fillRect(10, 10, 50, 50) // position, position, taille, taille
+        //}
+
+        // si j'ai besoin que l'objet soit visible j'entoure la function avec (function...)()
+        (function draw(){
+            ctx.fillStyle = "#BADA55";
+            ctx.fillRect(10, 10, 50, 50) // position, position, taille, taille
+        })();
+
+        (function drawCircle(){
+            ctx.fillStyle = "red";
+            ctx.beginPath();    // dessiner un cercle
+            ctx.arc(40, 40, 25, 0, Math.PI * 2, false) // position, position, rayon, et angle de depart
+            ctx.fill();   // remplir l'objet
+        })();
+    </script>
+</body>
+</html>
