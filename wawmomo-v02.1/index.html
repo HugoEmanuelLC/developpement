@@ -24,14 +24,41 @@
         <div class="slide_box hide">
             <a class="btn_slide_box_out btn_slide_box a_out_slide_box"><i class="fa-regular fa-outdent"></i></a>
             <div class="slide_box_contenu">
-                <h1>A Propos :</h1>
-                <p>... SLIDE BOX</p>
-                <p>pour une navbar, info ou tout autre besoin</p>
+                <div class="navbar">
+                    <ul>
+                        <li><a class="a_out_slide_box" href="./">Home</a></li>
+                        <li><a class="a_out_slide_box" href="#/gallerie">Gallerie</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <!-- ADD PAGE-->
         <div id="AddComponents"></div>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <!-- <hr> -->
+            
+                <div class="box_adresse_links">
+                    <div class="adresse">
+                        <p>Adresse:</p>
+                        <p>Av. Raymond Brassinne 18</p>
+                        <p>1420 Braine-l'Alleud</p>
+                        <p>Belgique</p>
+                    </div>
+            
+                    <ul>
+                        <li><a href="<?= $urlSw ?>/facebook">Facebook</a></li>
+                        <!--<li><a href="mailto:mail@.com">Mail: mail@.com</a></li>-->
+                        <li><a href="tel:02.203.43.00">Tel: 02.203.43.00</a></li>
+                    </ul>
+                </div>
+                
+                <div class="copyright">COPYRIGHT © 2022 Hugo Clavinas</div>
+            
+            </footer>
     </div>
 
 
@@ -39,6 +66,7 @@
     <script type="text/javascript" src="./src/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./routes/AddComponents.js"></script>
     <script type="text/javascript" src="./assets/js/slide_box.js"></script>
+    <!--<script type="text/javascript" src="./assets/js/datas_menus.js"></script>-->
 </body>
 
 </html>
