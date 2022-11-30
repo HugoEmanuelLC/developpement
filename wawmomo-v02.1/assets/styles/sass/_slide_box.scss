@@ -20,11 +20,12 @@
     padding: 10px;
     margin: 10px 0 0 10px;
 }
-.btn_slide_box:hover i{
-    color: var(--text_color_light_3);
+.btn_slide_box:hover{
+    background-color: var(--bckgd_color_light_1);
 }
 .btn_slide_box i{
     font-size: 1.3rem;
+    color: var(--text_color_light_3);
 }
 
 
