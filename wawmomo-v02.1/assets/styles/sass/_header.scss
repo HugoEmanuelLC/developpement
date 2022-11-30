@@ -1,6 +1,36 @@
 header{
-    height: 10vh;
+    // border: solid white 4px;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
     display: flex;
         justify-content: center;
         align-items: center;
+}
+.header_contenu{
+    line-height: 46px;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.header_contenu h1{
+    font-size: 6rem; 
+    text-shadow: var(--shadowText);
+    color: var(--bckgd_color_light_2);
+}
+.header_contenu h3{
+    color: var(--bckgd_color_light_2);
+    font-size: 1.3rem;
+    text-shadow: var(--shadowText);
+}
+
+@media screen AND (max-width: 800px) {
+    .header_contenu h1{
+        font-size: 4rem; 
+    }
 }

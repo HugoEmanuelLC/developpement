@@ -8,7 +8,7 @@
     // background-attachment: fixed;
     display: flex;
         flex-wrap: nowrap;
-        // justify-content: space-around;
+        justify-content: flex-start;
     overflow-x: scroll;
 }
 .box_list_menus div{
@@ -69,14 +69,20 @@
 .box_list_produits table{
     // border: solid 4px red;
     width: 50%;
-    max-width: 600px;
+    max-width: 800px;
 }
 .box_list_produits table td{
     padding: 10px 20px;
 }
 .box_list_produits table .color1{
-    background-color: #ff440036;
+    background-color: #ff440013;
 }
 .box_list_produits table .color2{
     background-color: #ffffff36;
+}
+
+@media screen And (max-width: 800px) {
+    .box_list_produits table{
+        width: 100%;
+    }
 }

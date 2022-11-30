@@ -11,6 +11,19 @@
 
 body{
     background-color: var(--bckgd_color_light_1);
+    // border: solid green 4px;
+}
+// #page{
+//     border: solid blue 4px;
+//     padding-top: none;
+// }
+// #AddComponents{
+//     margin-top: none;
+//     border: solid red 4px;
+// }
+
+.box_contenu{
+    position: relative;
 }
 
 a{
@@ -46,16 +59,20 @@ h1{
 
 
 /* Z-INDEX's */
+header{
+    z-index: 0;
+}
+.box_contenu{
+    z-index: 5;
+}
+.btn_slide_box{
+    z-index: 12;
+}
 .slide_box{
     z-index: 15;
 }
-.a_in_slide_box{
-    z-index: 10;
-    background-color: var(--bckgd_color_light_2);
-}
-.a_in_slide_box i{
-    color: var(--text_color_light_3);
-}
+
+
 
 
 

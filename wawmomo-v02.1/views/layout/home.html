@@ -1,4 +1,10 @@
 
+<header>
+    <div class="dark_opo header_contenu">
+        <h1>WAWMOMO</h1>
+        <h3>SANDWICHERIE - PETITE RESTAURATION - TAKE AWAY</h3>
+    </div>
+</header>
 
 
 
@@ -28,19 +34,22 @@
             </div>
         </div>-->
     </div>
+
+
+    <div class="box_list_produits ">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <h1>choisissez votre menu et commander par telephone !</h1>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<div class="box_list_produits ">
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <h1>choisissez votre menu et commander par telephone !</h1>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+
 
 
 <script type="text/javascript" src="./assets/js/datas_menus.js"></script>
@@ -49,8 +58,12 @@
 
         let img_bg_menu = $(".box_list_menus .item");
         let box_list_produits = $(".box_list_produits");
+        let header = $("header");
 
 
+        header.css({
+            "background-image": "url('./assets/images/background/rajat-sarki-Px6DxlRw7XM-unsplash.jpg')"
+        });
         img_bg_menu.css({
             "background-image": "url('https://www.voyagethailande.fr/cdn/th-public/panang_curry-MAX-w1000h600.jpg')"
         });

@@ -1,4 +1,5 @@
 .slide_box{
+    // border: solid black 4px;
     background-color: var(--bckgd_color_light_2);
     color: var(--text_color_dark_1);
     height: 100vh;
@@ -7,13 +8,17 @@
         top: 0;
 }
 
+.slide_box_contenu{
+    border: solid green 3px;
+    margin-top: 50px;
+}
+
 
 .btn_slide_box{
-    padding: 10px 12px;
-    display: inline;
-    position: sticky;
-        top: 10px;
-        left: 10px;
+    background-color: var(--bckgd_color_light_2);
+    position: fixed;
+    padding: 10px;
+    margin: 10px 0 0 10px;
 }
 .btn_slide_box:hover i{
     color: var(--text_color_light_3);
