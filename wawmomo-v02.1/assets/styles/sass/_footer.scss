@@ -24,7 +24,7 @@ footer li, footer p{
     border-bottom: solid 1px;
 }
 footer a{
-    color: rgb(174, 174, 174);
+    color: var(--text_color_dark_1);
 }
 footer a:hover{
     color: rgb(255, 255, 255);
@@ -39,9 +39,14 @@ footer .box_adresse_links{
     justify-content: space-around;
     align-items: center;
 }
-footer .copyright{
+footer .copyright a{
     font-size: 11px;
     margin-top: 50px;
+}
+
+footer ul li{
+    display: flex;
+        justify-content: flex-start;
 }
 
 @media screen and (min-width: 688px) {

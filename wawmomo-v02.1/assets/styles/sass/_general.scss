@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-family: 'Open Sans', serif;
     transition: 300ms;
     color: var(--text_color_dark_1);
 }
@@ -24,7 +24,7 @@ body{
 
 .box_contenu{
     position: relative;
-    background-color: var(--bckgd_color_light_1);
+    background-color: var(--bckgd_color_light_3);
 }
 
 a{
@@ -47,7 +47,9 @@ h1{
         justify-content: space-around;
         align-items: center;
 }
-
+h1,h2,h3,h4{
+    font-family: 'Raleway', sans-serif;
+}
 
 // titres sticky
 // .titre_Portfolio{

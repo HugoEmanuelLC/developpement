@@ -45,14 +45,13 @@
 
 // LIST DE PRODUITS
 .box_list_produits{
-    background-color: gainsboro;
     // margin: 10px;
     padding: 10px;
     // border: solid red 2px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 50vh;
+    // min-height: 50vh;
     // text-shadow: var(--shadowText);
     display: flex;
         flex-direction: column;
@@ -61,9 +60,9 @@
 }
 .box_list_produits h1{
     // background-color: green;
-    padding: 20px;
+    padding: 50px 0;
     font-size: 1.8rem;
-    text-decoration: underline 4px;
+    text-decoration: underline 2px;
     // width: 100%;
     // align-self: flex-start;
 }
@@ -74,13 +73,14 @@
 }
 .box_list_produits table td{
     padding: 10px 20px;
+    border-bottom: solid 1.5px black;
 }
-.box_list_produits table .color1{
-    background-color: #ff440013;
-}
-.box_list_produits table .color2{
-    background-color: #ffffff36;
-}
+// .box_list_produits table .color1{
+//     background-color: var(--bckgd_color_light_12);
+// }
+// .box_list_produits table .color2{
+//     background-color: #ffffff36;
+// }
 
 @media screen And (max-width: 800px) {
     .box_list_produits table{

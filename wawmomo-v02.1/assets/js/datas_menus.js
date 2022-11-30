@@ -43,7 +43,7 @@ if ($(".box_list_menus")) {
                 data.forEach(dataProduits => {
 
                     nameMenu = '<h1>'+dataProduits.NAME+' :</h1>';
-                    produit += '<tr class="color1"> <td>'+dataProduits.nom+'</td>';
+                    produit += '<tr> <td>'+dataProduits.nom+'</td>';
                     produit += '<td>'+dataProduits.PRIX+' €</td> </tr>';
                     
                     list_produits.html(nameMenu+produit+produitColor);

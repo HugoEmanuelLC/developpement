@@ -1,0 +1,36 @@
+
+.presentation{
+    // border: solid 4px red;
+    padding-top: 100px;
+}
+.presentation h1{
+    font-size: 1.8rem;
+}
+.presentation hr{
+    width: 80%;
+    margin: 0 auto;
+}
+.presentation_contenu{
+    // border: solid 4px blue;
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+    height: 40vh;
+}
+.presentation_contenu div{
+    width: 200px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen AND (max-width: 600px) {
+    // .presentation{
+    //     flex-direction: column;
+    // }
+    .presentation_contenu div{
+        width: 120px;
+        height: 90px;
+    }
+}
