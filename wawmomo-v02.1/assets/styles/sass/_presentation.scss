@@ -7,30 +7,32 @@
     font-size: 1.8rem;
 }
 .presentation hr{
-    width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 0 auto 50px;
 }
 .presentation_contenu{
     // border: solid 4px blue;
+    max-width: 1000px;
+    // height: 40vh;
+    margin: 0 auto;
     display: flex;
         justify-content: space-around;
         align-items: center;
-    height: 40vh;
 }
 .presentation_contenu div{
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    height: 200px;
+    margin: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-@media screen AND (max-width: 600px) {
+@media screen AND (max-width: 800px) {
     // .presentation{
     //     flex-direction: column;
     // }
     .presentation_contenu div{
-        width: 120px;
-        height: 90px;
+        margin: 0px;
     }
 }

@@ -91,10 +91,10 @@
     color: white;
 }
 .flecheUp:hover{
-    border-color: yellow;
+    border-color: var(--bckgd_color_light_1);
 }
 .flecheUp:hover i{
-    color: yellow;
+    color: var(--bckgd_color_light_1);
 }
 
 @media screen and (max-width: 688px){

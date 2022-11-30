@@ -1,7 +1,7 @@
 footer{
     position: sticky;
         bottom: 0;
-    // background-color: blueviolet;
+    background-color: var(--bckgd_color_light_2);
     color: rgb(174, 174, 174);
     // min-height: 300px;
     // margin-top: 100px;
@@ -18,13 +18,24 @@ footer{
 //     width: 50%;
 //     border: 0.5px dotted rgb(174, 174, 174,0.6);
 // }
-footer li, footer p{
-    padding: 4px 0;
+footer li,
+footer p{
     // text-decoration: underline;
     border-bottom: solid 1px;
 }
+footer p{
+    padding: 4px 0;
+}
+// footer li{
+//     border: solid red 3px;
+// }
 footer a{
     color: var(--text_color_dark_1);
+    // background-color: purple;
+    height: 100%;
+    width: 100%;
+    display: flex;
+        justify-content: flex-start;
 }
 footer a:hover{
     color: rgb(255, 255, 255);
@@ -44,10 +55,10 @@ footer .copyright a{
     margin-top: 50px;
 }
 
-footer ul li{
-    display: flex;
-        justify-content: flex-start;
-}
+// footer ul li{
+//     display: flex;
+//         justify-content: flex-start;
+// }
 
 @media screen and (min-width: 688px) {
     footer{

@@ -48,6 +48,10 @@ header{
     border-radius: 20px;
     padding: 5px 25px;
     box-shadow: var(--shadowObjet);
+    font-size: 1.5rem;
+}
+.header_contenu .btn_reservation:hover{
+    background-color: var(--bckgd_color_light_1);
 }
 
 @media screen AND (max-width: 800px) {

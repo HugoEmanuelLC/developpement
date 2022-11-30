@@ -52,17 +52,17 @@ h1,h2,h3,h4{
 }
 
 // titres sticky
-// .titre_Portfolio{
-//     // position: sticky;
-//     //     top: 0;
-//     background-color: var(--bckgd_color_light_1);
-//     margin: 0 0;
-//     padding: 10px 0;
-//     text-align: center;
-//     width: 100%;
-//     color: white;
-//     font-size: 1.5rem;
-// }
+.titre_Portfolio{
+    position: sticky;
+        top: 0;
+    background-color: var(--bckgd_color_light_1);
+    margin: 0 0;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+}
 // .titre_Portfolio a{
 //     cursor: pointer;
 //     position: absolute;
