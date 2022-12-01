@@ -1,0 +1,36 @@
+header{
+    padding: 100px 0;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    position: sticky;
+        top: 0;
+    color: var(--colorBG_04);
+    line-height: 1.2;
+}
+header div{
+    border-left: solid 20px red;
+    padding-left: 20px;
+}
+header h1{
+    font-size: 3rem;
+}
+header p,
+header i{
+    font-size: 2rem;
+}
+
+@media (max-width: 800px) {
+    header div{
+        border-left: solid 10px red;
+        padding-left: 10px;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    header p,
+    header i{
+        font-size: 1rem;
+    }
+}

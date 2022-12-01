@@ -1,0 +1,128 @@
+
+
+.haut_de_page{
+    background-color: var(--colorBlack);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    // color: black;
+    width: 100%;
+}
+
+// .haut_de_page div{
+//     border: solid 3px;
+// }
+
+.intitule{
+    height: 90vh;
+    display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-rows: minmax(400px, 1fr);
+        gap: 0px;
+
+    h1,h2,h3{
+        color: white;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    // h3{
+    //     font-size: 3rem;
+    // }
+}
+
+.intitule .text{
+    position: relative;
+    text-shadow: var(--shadowText);
+}
+
+.intitule .text ul{
+    position: absolute;
+        top: 20%;
+        left: 20%;
+    text-align: center;
+
+    li{
+        line-height: 1;
+    }
+}
+.intitule .text ul li:last-child{
+    margin-top: 20px;
+    background-color: var(--backColorOrange);
+    border-radius: 10px;
+    box-shadow: var(--colorShadow);
+    a{
+        color: white;
+        padding: 4px 8px;
+        font-size: 1.5rem;
+    }
+    a:hover{
+        padding: 6px 10px;
+        font-size: 1.9rem;
+    }
+}
+.intitule .text ul li:last-child:hover{
+    margin-top: 15px;
+}
+.intitule .photoProfil{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--colorShadow);
+}
+
+@media (max-width: 800px) {
+    .intitule{
+        .text ul{
+            // border: solid 3px green;
+            left: 5%;
+            right: 5%;
+        }
+        li:last-child{
+            width: 50%;
+            margin: 0 auto;
+        }
+        h1{
+            font-size: 4rem;
+        }
+        h2{
+            font-size: 2.5rem;
+        }
+        // h3{
+        //     font-size: 2rem;
+        // }
+    }
+    .intitule .photoProfil{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+
+.intro{
+    color: white;
+    margin: 0 auto;
+    padding: 100px 20px;
+    max-width: 900px;
+    text-shadow: var(--shadowText);
+
+    h1{
+        font-size: 1.5rem;
+        margin: 50px 0 30px;
+        text-decoration: underline;
+    }
+
+    p{
+        font-size: 17pt;
+    }
+}
+
+
