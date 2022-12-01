@@ -10,7 +10,6 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
 }
 // footer hr{
@@ -25,6 +24,10 @@ footer p{
 }
 footer p{
     padding: 4px 0;
+}
+footer p,
+footer a{
+    font-size: 1rem;
 }
 // footer li{
 //     border: solid red 3px;
@@ -64,5 +67,15 @@ footer .copyright a{
     footer{
         padding-left: 150px;
         padding-right: 150px;
+    }
+    footer p,
+    footer a{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    footer p,
+    footer a{
+        font-size: 0.8rem;
     }
 }
