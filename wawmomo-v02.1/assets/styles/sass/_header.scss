@@ -1,10 +1,11 @@
 header{
     // border: solid white 4px;
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     background-color: var(--bckgd_color_light_1);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 80vh;
     width: 100%;
     display: flex;
