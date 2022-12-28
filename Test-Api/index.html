@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    <p></p>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        let h1 = $("h1");
+        let p = $("p");
+        h1.append("Test Api");
+
+        /*$.ajax({
+            async: true,
+            crossDomain: true,
+            url: "https://api.themoviedb.org/3/movie/157336?api_key=1",
+            method: GET,
+            dataType: "json",
+            headers: {
+                api_key: "api_key",
+            },
+            success: function(data){
+                console.log(data);
+            },
+            error: p.append("error")
+        })*/
+
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://livescore6.p.rapidapi.com/matches/v2/list-live?Category=soccer&Timezone=-7",
+            "method": "GET",
+            "headers": {
+                "X-RapidAPI-Key": "a1dc46052cmsh4d631d26cd2a458p1da268jsn5677ebfa4bfb",
+                "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+            }
+        };
+        
+        $.ajax(settings).done(function (response) {
+            console.log(response.Stages[0].Events[0].T1[0].Nm);
+            console.log(response.Stages[0].Events[0].Tr1);
+            console.log(response.Stages[0].Events[0].T2[0].Nm);
+            console.log(response.Stages[0].Events[0].Tr2);
+
+            p.append(
+                response.Stages[0].Events[0].T1[0].Nm + " - " + 
+                response.Stages[0].Events[0].Tr1 + " " +
+                response.Stages[0].Events[0].T2[0].Nm + " - " + 
+                response.Stages[0].Events[0].Tr2
+            )
+        });
+    </script>
+</body>
+</html>
